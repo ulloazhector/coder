@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+
+@import "header";
+@import "menu";
+@import "main";
+@import "products";
+@import "footer";
+
+@import "cervezas";
+@import "locales";
+@import "nosotros";
+@import "contacto";
+@import "error";
+@import "tools";

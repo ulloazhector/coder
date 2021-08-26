@@ -1,0 +1,152 @@
+@import 'mixins';
+.encabezado-locales{
+    margin-left: 15%;
+  font-size: 50px;
+}
+.ubications{
+    .ubications-list {
+        @include mandp(20px 10px, 0);
+        list-style: none;
+        display: grid;
+        grid-template-columns:  minmax(728px, 900px);
+        /* grid-template-rows: repeat(4, 500px);  */
+        justify-content: center;
+        gap: 20px;
+
+        .ubi__item{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 500px;
+            grid-template-areas: "ubi-text ubi-image";
+            justify-content: space-between;
+            position: relative; // Para posicionar el mapa
+            background-color: #1f1f1f;
+            overflow: hidden;
+            
+            
+            .ubi-text-cont {
+                position: relative;
+
+                .ubi-text {
+                    position: relative;
+                    padding: 30px;
+                    text-align: right;
+                    line-height: 30px;
+                    color: white;
+                    grid-area: ubi-text;
+                }
+                
+                .reserva-btn{
+                    text-decoration: none;
+                    border: 0;
+                    color: white;
+                    line-height: 16px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    position: absolute;
+                    right: 30px;
+                    bottom: 30px;
+                    background: rgb(255,130,34);
+                    background: linear-gradient(45deg, rgba(255,100,34,1) 0%, rgba(255,0,121,1) 100%);
+                    padding: 10px 20px;
+                    transition: all .15s;
+                    &:hover {
+                        transform: scale(1.05);
+
+                    }
+                    
+                    &:active {
+                        transform: scale(.95);
+                    }
+                }
+            }
+
+            .ubi-img-map-cont{
+                overflow: hidden;
+                .ubi-map {
+                    @include sizes(120px, 120px);
+                    grid-area: ubi-map;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    z-index: 1;
+                }
+                
+                .ubi-image {
+                    @include sizes(100%, 100%);
+                    grid-area: ubi-image;
+                    object-fit:cover;
+                    opacity: .8;
+                    transition: all .1s;
+                    transition: transform .5s ;
+                    &:hover{
+                        opacity: 1;
+                        transform: scale(1.03);
+                    }
+                }
+            }
+        }
+
+
+        @include responsive(tablet){
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4, auto);
+            gap: 30px;
+            .ubi__item{
+                grid-template-columns: 100%;
+                grid-template-rows: 350px minmax(250px,auto);
+                grid-template-areas: "ubi-img-map-cont"
+                                     "ubi-text-cont";
+                .ubi-text-cont {
+                    grid-area: ubi-text-cont;
+                    .ubi-text{
+                        padding-bottom: 100px;
+                    }
+                }
+                .ubi-img-map-cont{
+                    grid-area: ubi-img-map-cont;
+                    .ubi-map{
+                        top: 10px;
+                    }
+                    .ubi-image{
+                        opacity: 1;
+                        @include sizes(100%, 100%);
+                    }
+                }
+            }
+        }
+        
+        
+        
+        @include responsive(mobile){
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4, auto);
+            gap: 30px;
+            .ubi__item{
+                grid-template-columns: 100%;
+                grid-template-rows: 350px minmax(250px,auto);
+                grid-template-areas: "ubi-img-map-cont"
+                                        "ubi-text-cont";
+                .ubi-text-cont{
+                    grid-area: ubi-text-cont;
+                    .ubi-text{
+                        padding-bottom: 100px;
+                    }
+                }
+                .ubi-img-map-cont{
+                    grid-area: ubi-img-map-cont;
+                    .ubi-map{
+                        top: 10px;
+                    }
+                    .ubi-image{
+                        opacity: 1;
+                        @include sizes(100%, 100%);
+                    }
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,63 @@
+@import 'mixins';
+
+.main-section{
+    position: relative;
+}
+.encabezado-main {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-style: normal;
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+    text-transform: uppercase;
+    color:#ffffff;
+    letter-spacing: 10px;
+    width: 50%;
+    z-index: 1;
+    @include responsive(tablet){
+        font-size: 48px;
+        .patagonia{
+            font-size: 48px;
+        }
+    }
+    @include responsive(mobile){
+        font-size: 32px;
+        line-height: 48px;
+        .patagonia{
+            font-size: 36px;
+        }
+    }
+}
+
+.patagonia {
+    background-image: linear-gradient(45deg, rgba(255,100,34,1) 0%, rgba(255,0,121,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.carousel{
+    .carousel-item{
+        height: 60vh;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .carousel-control-prev{
+        transition: all .3s;
+        &:hover {
+            box-shadow: 120px 0px 40px -90px rgba(255,255,255,0.5) inset;
+        }
+    }
+    .carousel-control-next{
+        transition: all .3s;
+        &:hover {
+            box-shadow: -120px 0px 40px -90px rgba(255,255,255,0.5) inset;
+        }
+    }
+
+}
+
+/* Fin Sección principal */

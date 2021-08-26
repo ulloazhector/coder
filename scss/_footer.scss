@@ -1,0 +1,143 @@
+@import "mixins";
+@import "tools";
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "logo-slogan    contacto       preguntas"
+    "redes-sociales redes-sociales redes-sociales";
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0 0 0;
+  background-color: $dark-clr;
+
+  .logo-footer {
+    grid-area: logo-slogan;
+    .logo-footer__image {
+      justify-content: center;
+      @include sizes(128px, 128px);
+    }
+    .logo-footer__slogan {
+      @include mandp(0, 0);
+      text-align: center;
+      color: white;
+      .fa-heart {
+        color: $prim-clr;
+      }
+    }
+  }
+
+  .contacto {
+    color: white;
+    grid-area: contacto;
+    .contacto__list {
+      @include mandp(0, 0);
+      width: auto;
+      list-style: none;
+      &::first-line {
+        line-height: 50px;
+        color: $prim-clr;
+      }
+      i {
+        width: 16px;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .preguntas {
+    grid-area: preguntas;
+
+    .preguntas__list {
+      @include mandp(0, 0);
+      list-style: none;
+      &::first-line {
+        line-height: 50px;
+        color: $prim-clr;
+      }
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.15s;
+      &:hover {
+        color: $prim-clr;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .redes-sociales {
+    display: flex;
+    flex-direction: column;
+    grid-area: redes-sociales;
+
+    .redes-sociales__list {
+      @include mandp(0, 0);
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      color: white;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .redes-sociales__derechos {
+      color: #fff;
+      font-size: 10px;
+      @include mandp(10px 0 0 0, 0 0 5px 0);
+      background-color: #212529;
+    }
+
+    a {
+      font-size: 20px;
+      color: white;
+      margin: 0 10px;
+
+      @each $soc-net, $clr in $soc-network-color {
+        .fa-#{$soc-net} {
+          transition: all 0.2s;
+          &:hover {
+            color: $clr;
+          }
+          @if $soc-net == "youtube" {
+            @extend %play-ytb;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(tablet) {
+    grid-template-areas:
+      "logo-slogan preguntas"
+      "logo-slogan contacto"
+      "redes-sociales redes-sociales";
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    .contacto {
+      justify-self: start;
+    }
+    .preguntas {
+      justify-self: start;
+    }
+  }
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo-slogan"
+      "contacto"
+      "preguntas"
+      "redes-sociales";
+    gap: 35px;
+    height: 100vh;
+    min-height: 680px;
+    .redes-sociales__list li{
+      margin: 0 5px;
+    }
+  }
+}
