@@ -39,10 +39,19 @@
 
 /* Lista de los 8 procesos de fabricación*/
 .list-container{
-    @include flex(center, stretch);
-
+    @include flex(center, center);
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    h2 {
+        height: auto;
+        width: 50%;
+    }
     .list-process{
-        width: 55%;
+        width: 50%;
+        padding: 0;
         list-style: none;
         display: flex;
         flex-direction: column;

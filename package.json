@@ -11,5 +11,13 @@
     "sass": "^1.38.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "\"# desafios-coder\"",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulloazhector/desafios-coder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ulloazhector/desafios-coder/issues"
+  },
+  "homepage": "https://github.com/ulloazhector/desafios-coder#readme"
 }

@@ -16,6 +16,7 @@
 
 
     <header>
+        <!-- Menú -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
@@ -34,9 +35,9 @@
                                 Cervezas
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="cervezas.html#ipa-beer">Pale Ales</a></li>
-                                <li><a class="dropdown-item" href="cervezas.html#scotch-beer">Scotch Ale</a></li>
-                                <li><a class="dropdown-item" href="cervezas.html#stout-beer">Stout</a></li>
+                                <li><a class="dropdown-item" href="cervezas.html#beer-ipa">Pale Ales</a></li>
+                                <li><a class="dropdown-item" href="cervezas.html#beer-scotch">Scotch Ale</a></li>
+                                <li><a class="dropdown-item" href="cervezas.html#beer-cream-stout">Stout</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -52,6 +53,7 @@
                 </div>
             </div>
         </nav>
+        <!-- Fin Menú -->
     </header>
     
 
@@ -62,7 +64,7 @@
     <!-- Tres tipos de cerveza -->
     <section class="beer-list-container">
         <ul class="beer-list">
-            <li class="beer-list-item">
+            <li class="beer-list-item" id="beer-ipa">
                 <div class="beer-info">
                     <ul>
                         <li>Alcohol 6.5%</li>
@@ -70,7 +72,7 @@
                         <li>Rubia</li>
                     </ul>
                 </div>
-                <img src="images/american-ipa.jpg" alt="American IPA" class="image-beer" id="ipa-beer">
+                <img src="images/american-ipa.jpg" alt="American IPA" class="image-beer">
                 <h2 class="name">Indian Pale Ale</h2>
                 <p class="descr">
                     Una Pale Ale decididamente amarga y lupulada.
@@ -81,7 +83,7 @@
             </li>
             
             
-            <li class="beer-list-item">
+            <li class="beer-list-item" id="beer-cream-stout">
                 <div class="beer-info">
                     <ul>
                         <li>Alcohol 4.5%</li>
@@ -89,7 +91,7 @@
                         <li>Negra</li>
                     </ul>
                 </div>
-                <img src="images/cream-stout.jpg" alt="Cream Stout" class="image-beer" id="stout-beer"> 
+                <img src="images/cream-stout.jpg" alt="Cream Stout" class="image-beer"> 
                 <h2 class="name">Cream Stout</h2>
                 <p class="descr">
                     Originalmente el estilo proviene de las Islas Británicas.
@@ -101,7 +103,7 @@
             </li>
             
             
-            <li class="beer-list-item">
+            <li class="beer-list-item" id="beer-scotch">
                 <div class="beer-info">
                     <ul>
                         <li>Alcohol 5.5%</li>
@@ -109,7 +111,7 @@
                         <li>Roja</li>
                     </ul>
                 </div>
-                <img src="images/scottish-ale.jpg" alt="Scottish Ale" class="image-beer" id="scotch-beer">
+                <img src="images/scottish-ale.jpg" alt="Scottish Ale" class="image-beer">
                 <h2 class="name">Scotch Ale</h2>
                 <p class="descr">
                     Es un estilo con origen en Escocia. Históricamente era imposible cultivar lúpulo en este lugar, por lo tanto en cervezas elaboradas allí, la malta siempre predomina. Nuestra Scotch es de proceso Ale, y hace una perfecta referencia a la historia de este producto. La utilización de maltas caramelizadas aportan un sabor dulce y la malta tostada en bajas cantidades, un leve sabor tostado. 
