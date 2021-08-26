@@ -644,6 +644,7 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 .acerca-de .encabezado-nosotros {
   text-transform: uppercase;
@@ -656,8 +657,15 @@ h6 {
 }
 .acerca-de p, .acerca-de img {
   text-align: justify;
-  margin: 20px;
   width: 60%;
+}
+.acerca-de .h2-nosotros-proposito {
+  width: 60%;
+}
+@media only screen and (min-width: 0px) and (max-width: 425px) {
+  .acerca-de .encabezado-nosotros, .acerca-de p, .acerca-de img, .acerca-de .h2-nosotros-proposito {
+    width: 85%;
+  }
 }
 
 /* Lista de los 8 procesos de fabricación*/
@@ -671,12 +679,12 @@ h6 {
   padding: 0;
   margin: 0;
 }
-.list-container h2 {
+.list-container .h2-nosotros-process {
   height: auto;
-  width: 50%;
+  width: 60%;
 }
 .list-container .list-process {
-  width: 50%;
+  width: 60%;
   padding: 0;
   list-style: none;
   display: flex;
@@ -685,12 +693,13 @@ h6 {
 }
 .list-container .list-process .list-process-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   margin: 20px 0;
   position: relative;
+  /*Para que .tag sea absoluto*/
 }
 .list-container .list-process .list-process-item .tag {
   position: absolute;
@@ -714,10 +723,17 @@ h6 {
   border-radius: 100%;
   border: 4px solid #bba451;
 }
-.list-container .list-process .list-process-item p {
+.list-container .list-process .list-process-item article {
+  width: 600px;
   margin: 15px;
-  width: 500px;
+}
+.list-container .list-process .list-process-item p {
   color: #221f1f;
+}
+@media only screen and (min-width: 0px) and (max-width: 425px) {
+  .list-container .list-process, .list-container .h2-nosotros-process {
+    width: 85%;
+  }
 }
 
 /* Fin Nosotros */

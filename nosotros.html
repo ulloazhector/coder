@@ -60,6 +60,8 @@
     <figure class="banner">
         <img src="images/bariloche.jpg" alt="Bariloche">
     </figure>
+
+
     <!-- Acerca de nosotros... -->
     <section class="acerca-de">
         <h1 class="encabezado-nosotros">Nosotros</h1>
@@ -71,7 +73,7 @@
         </p>
         <img src="images/brewing-process.png" alt="Brewing Process">
 
-        <h2>Nuestro propósito</h2>
+        <h2 class="h2-nosotros-proposito">Nuestro propósito</h2>
 
         <p>
             Buscamos que cada paso de crecimiento sea un paso también en sustentabilidad: por eso
@@ -85,20 +87,23 @@
 
     <!-- Lista con pasos de fabricación -->
     <section class="list-container">
-        <h2>Proceso de fabricación</h2>
+        <h2 class="h2-nosotros-process">Proceso de fabricación</h2>
         <ul class="list-process">
             <li class="list-process-item">
                 <div class="tag">
                     <span class="num-list">1</span>
                 </div>
                 <img src="images/process/process-1.png" alt="Proceso 1">
-                <p>
-                    Durante el malteado los granos de cereal, normalmente de cebada,
-                    atraviesan un proceso de germinación controlada con el fin de activar las enzimas presentes en el grano,
-                    que luego serán necesarias durante la maceración.
-                    Dependiendo del grado de tostado obtenido durante el malteo,
-                    conseguiremos maltas más claras u oscuras, que aportarán el color de la cerveza.
-                </p>
+                <article>
+                    <h3>Malteado</h3>
+                    <p>
+                        Durante el malteado los granos de cereal, normalmente de cebada,
+                        atraviesan un proceso de germinación controlada con el fin de activar las enzimas presentes en el grano,
+                        que luego serán necesarias durante la maceración.
+                        Dependiendo del grado de tostado obtenido durante el malteo,
+                        conseguiremos maltas más claras u oscuras, que aportarán el color de la cerveza.
+                    </p>
+                </article>
             </li>
 
             <li class="list-process-item">
@@ -106,13 +111,16 @@
                     <span class="num-list">2</span>
                 </div>
                 <img src="images/process/process-2.png" alt="Proceso 2">
-                <p>
-                    Una vez hemos molido el grano de cereal, es hora de mezclarlo con agua para preparar el mosto cervecero.
-                    El agua es el ingrediente mayoritario representando entre el 85% - 90% del contenido de la cerveza final.
-                    Para el proceso de macerado, la malta se mezcla con el agua a diferentes tiempos y temperaturas,
-                    produciendo las transformaciones necesarias para convertir el almidón en azúcares fermentables.
-
-                </p>
+                <article>
+                    <h3>Molienda y maceración</h3>
+                    <p>
+                        Una vez hemos molido el grano de cereal, es hora de mezclarlo con agua para preparar el mosto cervecero.
+                        El agua es el ingrediente mayoritario representando entre el 85% - 90% del contenido de la cerveza final.
+                        Para el proceso de macerado, la malta se mezcla con el agua a diferentes tiempos y temperaturas,
+                        produciendo las transformaciones necesarias para convertir el almidón en azúcares fermentables.
+                        
+                    </p>
+                </article>
             </li>
 
             <li class="list-process-item">
@@ -120,51 +128,63 @@
                     <span class="num-list">3</span>
                 </div>
                 <img src="images/process/process-3.png" alt="Proceso 3">
-                <p>
-                    Tras la maceración, se separa el mosto líquido de los restos de malta.
-                    Para ello filtramos el mosto a través de una cuba filtro o de un filtro prensa,
-                    en ambos casos se separa el líquido del sólido,
-                    a este último le llamamos bagazo y normalmente es reaprovechado para alimentación animal.
-                </p>
-            </li>
+                <article>
+                    <h3>Filtrado</h3>
+                    <p>
+                        Tras la maceración, se separa el mosto líquido de los restos de malta.
+                        Para ello filtramos el mosto a través de una cuba filtro o de un filtro prensa,
+                        en ambos casos se separa el líquido del sólido,
+                        a este último le llamamos bagazo y normalmente es reaprovechado para alimentación animal.
+                    </p>
+                </article>
+                </li>
 
             <li class="list-process-item">
                 <div class="tag">
                     <span class="num-list">4</span>
                 </div>
                 <img src="images/process/process-4.png" alt="Proceso 4">
-                <p>
-                    El mosto se lleva a ebullición con el objetivo de aportar amargor y aroma presentes en el lúpulo.
-                    Además, durante esta etapa se esteriliza el mosto, se coagulan proteínas y se evaporan aromas indeseables.
-                    Normalmente este proceso dura en torno a una hora o más, dependiendo del estilo de cerveza que se esté elaborando.
-                    Posteriormente el mosto final es sometido a una especie de centrifugado o whirpool.
-                </p>
-            </li>
+                <article>
+                    <h3>Cocción</h3>
+                    <p>
+                        El mosto se lleva a ebullición con el objetivo de aportar amargor y aroma presentes en el lúpulo.
+                        Además, durante esta etapa se esteriliza el mosto, se coagulan proteínas y se evaporan aromas indeseables.
+                        Normalmente este proceso dura en torno a una hora o más, dependiendo del estilo de cerveza que se esté elaborando.
+                        Posteriormente el mosto final es sometido a una especie de centrifugado o whirpool.
+                    </p>
+                </article>
+                </li>
 
             <li class="list-process-item">
                 <div class="tag">
                     <span class="num-list">5</span>
                 </div>
                 <img src="images/process/process-5.png" alt="Proceso 5">
-                <p>
-                    Finalmente llegó el momento de enfriar y airear el mosto para luego sembrar la levadura.
-                    Durante la fermentación se transforman los azúcares fermentables en alcohol y CO2,
-                    al tiempo que se generan una gran variedad de compuestos, muchos de los cuales contribuyen a darle los aromas característicos tan populares de la cerveza.
-                    Usualmente en el proceso cervecero se utilizan dos grandes familias de levaduras: lager y ale.
-                    Este proceso se desarrolla en tanques de fermentación que en ocasiones son conocidos como fermentadores.
-                </p>
-            </li>
+                <article>
+                    <h3>Fermentación</h3>
+                    <p>
+                        Finalmente llegó el momento de enfriar y airear el mosto para luego sembrar la levadura.
+                        Durante la fermentación se transforman los azúcares fermentables en alcohol y CO2,
+                        al tiempo que se generan una gran variedad de compuestos, muchos de los cuales contribuyen a darle los aromas característicos tan populares de la cerveza.
+                        Usualmente en el proceso cervecero se utilizan dos grandes familias de levaduras: lager y ale.
+                        Este proceso se desarrolla en tanques de fermentación que en ocasiones son conocidos como fermentadores.
+                    </p>
+                </article>
+                </li>
 
             <li class="list-process-item">
                 <div class="tag">
                     <span class="num-list">6</span>
                 </div>
                 <img src="images/process/process-6.png" alt="Proceso 6">
-                <p>
-                    El líquido resultante requiere de un período de maduración,
-                    donde la cerveza es sometida a bajas temperaturas para que el sabor y
-                     los aromas logrados durante el proceso se estabilicen y se consiga el justo balance entre los diferentes matices.
-                </p>
+                <article>
+                    <h3>Maduración</h3>
+                    <p>
+                        El líquido resultante requiere de un período de maduración,
+                        donde la cerveza es sometida a bajas temperaturas para que el sabor y
+                        los aromas logrados durante el proceso se estabilicen y se consiga el justo balance entre los diferentes matices.
+                    </p>
+                </article>
             </li>
 
             <li class="list-process-item">
@@ -172,11 +192,14 @@
                     <span class="num-list">7</span>
                 </div>
                 <img src="images/process/process-7.png" alt="Proceso 7">
-                <p>
-                    Generalmente al terminar la maduración la cerveza es sometida a un proceso de filtración para separar pequeñas
-                    partículas de levadura y compuestos que aún se encuentran en suspensión.
-                    Una vez filtrada se obtiene la cerveza brillante, la cual se envasa en barriles.
-                </p>
+                <article>
+                    <h3>Envasado</h3>
+                    <p>
+                        Generalmente al terminar la maduración la cerveza es sometida a un proceso de filtración para separar pequeñas
+                        partículas de levadura y compuestos que aún se encuentran en suspensión.
+                        Una vez filtrada se obtiene la cerveza brillante, la cual se envasa en barriles.
+                    </p>
+                </article>
             </li>
 
             <li class="list-process-item">
@@ -184,9 +207,12 @@
                     <span class="num-list">8</span>
                 </div>
                 <img src="images/process/process-8.png" alt="Proceso 8">
-                <p>
-                    Finalmente la cerveza Montaña está disponible para su consumo.
-                </p>
+                <article>
+                    <h3>Distribución y consumo</h3>
+                    <p>
+                        Finalmente la cerveza Montaña está disponible para su consumo.
+                    </p>
+                </article>
             </li>
 
         </ul>

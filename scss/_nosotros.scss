@@ -15,7 +15,8 @@
 .acerca-de {
     @include flex(center, center);
     flex-direction: column;
-    
+    width: 100%;
+
     .encabezado-nosotros{
         text-transform: uppercase;
         color: $ns-light;
@@ -26,11 +27,18 @@
         box-shadow: $ns-light 0 -4px inset;
     
     }
-    
     p, img{
         text-align: justify;
-        margin: 20px;
+        // margin: 20px;
         width: 60%;
+    }
+    .h2-nosotros-proposito{
+        width: 60%;
+    }
+    @include responsive(mobile){
+        .encabezado-nosotros, p, img, .h2-nosotros-proposito{
+            width: 85%;
+        }
     }
 }
 
@@ -45,31 +53,33 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    h2 {
+
+    .h2-nosotros-process {
         height: auto;
-        width: 50%;
+        width: 60%;
     }
+
     .list-process{
-        width: 50%;
+        width: 60%;
         padding: 0;
         list-style: none;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
+        
         .list-process-item {
-            @include flex(center, center);
+            @include flex(space-evenly, center);
             flex-wrap: wrap;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
             margin: 20px 0;
-            position: relative;
-
+            position: relative; /*Para que .tag sea absoluto*/
+            
             .tag {
                 position: absolute;
                 /* left: 10px; */
                 left: -20px;
                 top: 16px;
-            
+                
                 .num-list {
                     background-color: $ns-light;
                     color: white;
@@ -81,20 +91,26 @@
                     display: inline-block;
                 }
             }
-
+            
             img{
                 width: 120px;
                 margin: 20px;
                 border-radius: 100%;
                 border: 4px solid $ns-light;
             }
+            article {
+                width: 600px;
+                margin:15px;
 
+            }
             p {
-                margin: 15px;
-                width: 500px;
-                 color: rgb(34,31,31); 
-                //color: tomato;
+                 color: rgb(34,31,31);
             }  
+        }
+    }
+    @include responsive(mobile){
+        .list-process, .h2-nosotros-process{
+            width: 85%;
         }
     }
 }
