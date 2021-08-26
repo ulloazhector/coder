@@ -21,6 +21,7 @@
         text-transform: uppercase;
         color: $ns-light;
         width: 60%;
+        min-width: 576px;
         font-size: 44px;
         font-family: 'Oswald', 'sans-serif';
         margin-top: 20px;
@@ -31,13 +32,22 @@
         text-align: justify;
         // margin: 20px;
         width: 60%;
+        min-width: 576px;
     }
     .h2-nosotros-proposito{
         width: 60%;
+        min-width: 576px;
+    }
+    @include responsive(tablet){
+        .encabezado-nosotros, p, img, .h2-nosotros-proposito{
+            width: 75%;
+            min-width: 0;
+        }
     }
     @include responsive(mobile){
         .encabezado-nosotros, p, img, .h2-nosotros-proposito{
             width: 85%;
+            min-width: 0;
         }
     }
 }
@@ -57,10 +67,12 @@
     .h2-nosotros-process {
         height: auto;
         width: 60%;
+        min-width: 576px;
     }
 
     .list-process{
         width: 60%;
+        min-width: 576px;
         padding: 0;
         list-style: none;
         display: flex;
@@ -108,9 +120,16 @@
             }  
         }
     }
+    @include responsive(tablet){
+        .list-process, .h2-nosotros-process{
+            width: 75%;
+            min-width: 0;
+        }
+    }
     @include responsive(mobile){
         .list-process, .h2-nosotros-process{
             width: 85%;
+            min-width: 0;
         }
     }
 }
