@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cervezas</title>
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo-hops.png" alt="Logo" class="logo-image">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cervezas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="cervezas.html#ipa-beer">Pale Ales</a></li>
+                                <li><a class="dropdown-item" href="cervezas.html#scotch-beer">Scotch Ale</a></li>
+                                <li><a class="dropdown-item" href="cervezas.html#stout-beer">Stout</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="locales.html">Locales</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+
+
+   
+    <h1 class="encabezado-cervezas">Cervezas</h1>
+    <!-- Tres tipos de cerveza -->
+    <section class="beer-list-container">
+        <ul class="beer-list">
+            <li class="beer-list-item">
+                <div class="beer-info">
+                    <ul>
+                        <li>Alcohol 6.5%</li>
+                        <li>IBU 56</li>
+                        <li>Rubia</li>
+                    </ul>
+                </div>
+                <img src="images/american-ipa.jpg" alt="American IPA" class="image-beer" id="ipa-beer">
+                <h2 class="name">Indian Pale Ale</h2>
+                <p class="descr">
+                    Una Pale Ale decididamente amarga y lupulada.
+                    Este estilo se logra con una gran base de maltas que balancean las abundantes adiciones de lúpulo en todas las etapas del proceso.
+                    Se destaca su carácter resionos, un toque cítrico y frutal.
+                </p>
+                <button class="buy-btn">Comprar</button>
+            </li>
+            
+            
+            <li class="beer-list-item">
+                <div class="beer-info">
+                    <ul>
+                        <li>Alcohol 4.5%</li>
+                        <li>IBU 35</li>
+                        <li>Negra</li>
+                    </ul>
+                </div>
+                <img src="images/cream-stout.jpg" alt="Cream Stout" class="image-beer" id="stout-beer"> 
+                <h2 class="name">Cream Stout</h2>
+                <p class="descr">
+                    Originalmente el estilo proviene de las Islas Británicas.
+                    Se elabora mediante proceso Ale, a lo que se llama también fermentación alta.
+                    Es de un color profundamente oscuro, debido al uso de maltas tostadas y negras.
+                    Esto confiere el sabor seco a café y cereales tostados. 
+                </p>
+                <button class="buy-btn">Comprar</button>
+            </li>
+            
+            
+            <li class="beer-list-item">
+                <div class="beer-info">
+                    <ul>
+                        <li>Alcohol 5.5%</li>
+                        <li>IBU 37</li>
+                        <li>Roja</li>
+                    </ul>
+                </div>
+                <img src="images/scottish-ale.jpg" alt="Scottish Ale" class="image-beer" id="scotch-beer">
+                <h2 class="name">Scotch Ale</h2>
+                <p class="descr">
+                    Es un estilo con origen en Escocia. Históricamente era imposible cultivar lúpulo en este lugar, por lo tanto en cervezas elaboradas allí, la malta siempre predomina. Nuestra Scotch es de proceso Ale, y hace una perfecta referencia a la historia de este producto. La utilización de maltas caramelizadas aportan un sabor dulce y la malta tostada en bajas cantidades, un leve sabor tostado. 
+                </p>
+                <button class="buy-btn">Comprar</button>
+            </li>
+            
+            <li class="beer-list-item">
+                <div class="beer-info">
+                    <ul>
+                        <li>Alcohol 4.5%</li>
+                        <li>IBU 15</li>
+                        <li>Rubia</li>
+                    </ul>
+                </div>
+                <img src="images/golden-ale.jpg" alt="Golden Ale" class="image-beer">
+                <h2 class="name">Golden Ale</h2>
+                <p class="descr">
+                    Una cerveza fácil de beber con interesantes notas a maltas claras y dulces, balanceada con un toque de lúpulo, levemente cítrico y floral. Una pinta refrescante de sabores suaves y agradables.
+                </p>
+                <button class="buy-btn">Comprar</button>
+            </li>
+
+
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <!-- Logo junto con slogan -->
+        <section class="logo-footer">
+            <img src="images/logo-hops.png" alt="Logo" class="logo-footer__image">
+            <p class="logo-footer__slogan">We love birra <i class="fas fa-heart"></i></p>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section class="contacto">
+            <ul class="contacto__list">
+                <li>Información de contacto</li>
+                <li><i class="far fa-envelope"></i> infocontacto@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +54 9 2944 345678</li>
+                <li><i class="fas fa-map-marker-alt"></i> Avenida Siempreviva 742</li>
+                <li><i class="far fa-clock"></i> Lunes a Sábado de 10 a 00 hs</li>
+            </ul>
+        </section>
+
+        <!-- Sección FAQs -->
+        <section class="preguntas">
+            <ul class="preguntas__list">
+                <li>Sobre nosotros</li>
+                <li><a href="cervezas.html">Nuestras cervezas</a></li>
+                <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+                <li><a href="locales.html">¿Dónde estamos?</a></li>
+                <li><a href="contacto.html">Preguntas frecuentes</a></li>
+            </ul>
+        </section>
+
+        <!-- Sección Redes sociales -->
+        <section class="redes-sociales">
+            <p>Seguinos en</p>
+            <ul class="redes-sociales__list">
+                <li><a href="https://www.instagram.com/?hl=es"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="http://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/?hl=ES"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <p class="redes-sociales__derechos">© 2021 Montaña Brew Company. Reservados todos los derechos.</p>
+        </section>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>
