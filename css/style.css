@@ -277,7 +277,7 @@ h6 {
   align-items: center;
   gap: 15px;
   padding: 20px 0 0 0;
-  background-color: yellowgreen;
+  background-color: orange;
 }
 .footer .logo-footer {
   grid-area: logo-slogan;
