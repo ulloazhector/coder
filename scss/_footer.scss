@@ -70,6 +70,8 @@
     }
   }
 
+
+
   .redes-sociales {
     display: flex;
     flex-direction: column;
@@ -79,12 +81,25 @@
       @include mandp(0, 0);
       list-style: none;
       display: flex;
-      justify-content: center;
+      @include flex(center, flex-end);
+      li{
+        @include sizes(50px, 50px);
+      }
+
+      .redes-sociales__text{
+        text-decoration: none;
+        font-size: 10px;
+        color: white;
+        opacity: 0.5;
+      }
+
     }
+
+    
     p {
       color: white;
       text-align: center;
-      margin: 10px;
+      margin: 20px;
     }
 
     .redes-sociales__derechos {
@@ -95,10 +110,14 @@
     }
 
     a {
-      font-size: 20px;
       color: white;
       margin: 0 10px;
-
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      @include flex(center, center);
+      
+      // Coloreo los iconos en el hover
       @each $soc-net, $clr in $soc-network-color {
         .fa-#{$soc-net} {
           transition: all 0.2s;
@@ -110,8 +129,14 @@
           }
         }
       }
+      
+      font-size: 20px;
     }
   }
+
+
+
+
   @include responsive(tablet) {
     grid-template-areas:
       "logo-slogan preguntas"

@@ -17,6 +17,7 @@ $soc-network-color:(
 
 // EXTENDS
 %play-ytb{
+    border: 5px solid transparent;
     &::before{
         @include sizes(10px,10px);
         @include flex(center, center);
