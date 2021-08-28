@@ -44,6 +44,10 @@ h6 {
   padding: 0;
   justify-content: flex-end;
 }
+.navbar .container-fluid .logo-image {
+  width: 64px;
+  height: 64px;
+}
 @media only screen and (max-width: 991px) {
   .navbar .container-fluid .navbar-toggler {
     flex-basis: 20%;
