@@ -3,6 +3,9 @@
 
 
 .navbar{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
     .container-fluid{
         justify-content: flex-end;
         @include responsive(mob_and_tab){
@@ -34,7 +37,8 @@
                 @include flex(center, center);
                 flex-direction: column;
                 justify-content: center;
-                @include sizes(30px, 30px);
+                @include sizes(40px, 40px);
+                border-radius: 50%;
                 .stick{
                     background-color: rgba(255, 255, 255, 0.8);
                     @include sizes(24px,2px);
@@ -42,6 +46,7 @@
                     transition: all .4s ease;
                 }
                 &:hover{
+                    background-color: #313539;
                     .stick{
                         background-color: $prim-clr;
                     }
@@ -54,6 +59,9 @@
                 box-shadow: none;
             }
             &[aria-expanded="true"]{
+                .stick{
+                    background-color: $prim-clr;
+                }
                 .stick-up{
                     transform: translateY(8px) rotate(45deg);
                 }

@@ -34,6 +34,11 @@ h6 {
   background-color: white;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
 .navbar .container-fluid {
   justify-content: flex-end;
 }
@@ -66,8 +71,9 @@ h6 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 .navbar .container-fluid .navbar-toggler .menu-icon .stick {
   background-color: rgba(255, 255, 255, 0.8);
@@ -76,12 +82,18 @@ h6 {
   margin: 3px 0;
   transition: all 0.4s ease;
 }
+.navbar .container-fluid .navbar-toggler .menu-icon:hover {
+  background-color: #313539;
+}
 .navbar .container-fluid .navbar-toggler .menu-icon:hover .stick {
   background-color: tomato;
 }
 .navbar .container-fluid .navbar-toggler:focus {
   border: transparent;
   box-shadow: none;
+}
+.navbar .container-fluid .navbar-toggler[aria-expanded=true] .stick {
+  background-color: tomato;
 }
 .navbar .container-fluid .navbar-toggler[aria-expanded=true] .stick-up {
   transform: translateY(8px) rotate(45deg);
@@ -839,10 +851,6 @@ h6 {
   padding: 0 20px;
   text-align: justify;
   margin: auto;
-}
-
-.encabezado-contacto {
-  margin: 20px auto;
 }
 
 .error-container {
