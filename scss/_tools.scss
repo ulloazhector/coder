@@ -17,14 +17,14 @@ $soc-network-color:(
 
 // EXTENDS
 %play-ytb{
-    border: 5px solid transparent;
-    &::before{
+    .fa-youtube::before{
+        border: 5px solid transparent;
         @include sizes(10px,10px);
         @include flex(center, center);
         background-color: transparent;
         transition: all .2s;
     }
-    &:hover::before{
+    .fa-youtube:hover::before{
         background-color: white;
     }
 }
