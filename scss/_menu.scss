@@ -109,11 +109,22 @@
                 }
             }
             .nav-link{
-                transition: all .25s;
+                transition: color .15s;
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                i{
+                    transition: all .15s;
+                    margin-right: 20px;
+                    padding: 5px;
+                    justify-self: flex-start;
+                }
                 &:hover{
                     color: $prim-clr;
                     @include responsive(mob_and_tab){
-                        padding-right: 8px;
+                        i{
+                            padding-right: 16px;
+                        }
                     }
                 }
             }

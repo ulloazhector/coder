@@ -137,14 +137,23 @@ h6 {
   background-color: #dcdbdf;
 }
 .navbar .container-fluid .nav-item .nav-link {
-  transition: all 0.25s;
+  transition: color 0.15s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.navbar .container-fluid .nav-item .nav-link i {
+  transition: all 0.15s;
+  margin-right: 20px;
+  padding: 5px;
+  justify-self: flex-start;
 }
 .navbar .container-fluid .nav-item .nav-link:hover {
   color: tomato;
 }
 @media only screen and (max-width: 991px) {
-  .navbar .container-fluid .nav-item .nav-link:hover {
-    padding-right: 8px;
+  .navbar .container-fluid .nav-item .nav-link:hover i {
+    padding-right: 16px;
   }
 }
 
