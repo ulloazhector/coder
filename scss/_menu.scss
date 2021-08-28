@@ -82,9 +82,12 @@
         }
         .nav-item{
             width: 100%;
-            padding: 0 15px;
+            padding: 0;
             &:hover{
                 background-color: #313539;
+                .nav-link{
+                    color: $prim-clr;
+                }
             }
 
             .dropdown-menu{
@@ -119,6 +122,8 @@
                 transition: color .15s;
                 display: flex;
                 justify-content: flex-start;
+                width: 100%;
+                padding: 8px 16px;
                 align-items: baseline;
                 i{
                     transition: all .15s;
@@ -130,7 +135,6 @@
                     }
                 }
                 &:hover{
-                    color: $prim-clr;
                     @include responsive(mob_and_tab){
                         i{
                             padding-right: 16px;
