@@ -272,12 +272,12 @@ h6 {
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "logo-slogan    contacto       preguntas" "redes-sociales redes-sociales redes-sociales";
+  grid-template-areas: "logo-slogan    contacto       preguntas" "redes-sociales redes-sociales redes-sociales" "derechos       derechos       derechos";
   justify-items: center;
   align-items: center;
   gap: 15px;
   padding: 20px 0 0 0;
-  background-color: #212529;
+  background-color: #222;
 }
 .footer .logo-footer {
   grid-area: logo-slogan;
@@ -336,9 +336,10 @@ h6 {
   text-decoration: underline;
 }
 .footer .redes-sociales {
+  grid-area: redes-sociales;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  grid-area: redes-sociales;
 }
 .footer .redes-sociales .redes-sociales__list {
   margin: 0;
@@ -359,17 +360,10 @@ h6 {
   color: white;
   opacity: 0.5;
 }
-.footer .redes-sociales p {
+.footer .redes-sociales .followus {
   color: white;
   text-align: center;
-  margin: 20px;
-}
-.footer .redes-sociales .redes-sociales__derechos {
-  color: #fff;
-  font-size: 10px;
-  margin: 10px 0 0 0;
-  padding: 0 0 5px 0;
-  background-color: #212529;
+  margin: 10px;
 }
 .footer .redes-sociales a {
   color: white;
@@ -430,9 +424,23 @@ h6 {
 .footer .redes-sociales a:hover .play-ytb {
   background-color: white;
 }
+.footer .derechos {
+  grid-area: derechos;
+  width: 100%;
+  font-size: 12px;
+  height: 30px;
+}
+.footer .derechos .derechos__text {
+  padding: 20px;
+  padding-right: 50px;
+  margin: 0;
+  background-color: #181818;
+  color: #888;
+  text-align: end;
+}
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .footer {
-    grid-template-areas: "logo-slogan preguntas" "logo-slogan contacto" "redes-sociales redes-sociales";
+    grid-template-areas: "logo-slogan    preguntas" "logo-slogan    contacto" "redes-sociales redes-sociales" "derechos       derechos";
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
@@ -446,8 +454,8 @@ h6 {
 @media only screen and (min-width: 0px) and (max-width: 425px) {
   .footer {
     grid-template-columns: 1fr;
-    grid-template-areas: "logo-slogan" "contacto" "preguntas" "redes-sociales";
-    gap: 35px;
+    grid-template-areas: "logo-slogan" "contacto" "preguntas" "redes-sociales" "derechos";
+    gap: 30px;
     height: 100vh;
     min-height: 680px;
   }

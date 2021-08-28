@@ -7,12 +7,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "logo-slogan    contacto       preguntas"
-    "redes-sociales redes-sociales redes-sociales";
+    "redes-sociales redes-sociales redes-sociales"
+    "derechos       derechos       derechos";
   justify-items: center;
   align-items: center;
   gap: 15px;
   padding: 20px 0 0 0;
-  background-color: $dark-clr;
+  //background-color: $dark-clr;
+  background-color: #222;
 
   .logo-footer {
     grid-area: logo-slogan;
@@ -73,9 +75,10 @@
 
 
   .redes-sociales {
+    grid-area: redes-sociales;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    grid-area: redes-sociales;
 
     .redes-sociales__list {
       @include mandp(0, 0);
@@ -96,18 +99,12 @@
     }
 
 
-    p {
+    .followus {
       color: white;
       text-align: center;
-      margin: 20px;
+      margin: 10px;
     }
 
-    .redes-sociales__derechos {
-      color: #fff;
-      font-size: 10px;
-      @include mandp(10px 0 0 0, 0 0 5px 0);
-      background-color: #212529;
-    }
 
     a {
       color: white;
@@ -156,13 +153,30 @@
   }
 
 
+  .derechos{
+    grid-area: derechos;
+    width: 100%;
+    font-size: 12px;
+    height: 30px;
+    .derechos__text{
+      padding: 20px;
+      padding-right: 50px;
+      margin: 0;
+      background-color: #181818;
+      color: #888;
+      //font-family: 'Open Sans';
+      text-align: end;
+    }
+  }
+
 
 
   @include responsive(tablet) {
     grid-template-areas:
-      "logo-slogan preguntas"
-      "logo-slogan contacto"
-      "redes-sociales redes-sociales";
+      "logo-slogan    preguntas"
+      "logo-slogan    contacto"
+      "redes-sociales redes-sociales"
+      "derechos       derechos";
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     .contacto {
@@ -178,8 +192,9 @@
       "logo-slogan"
       "contacto"
       "preguntas"
-      "redes-sociales";
-    gap: 35px;
+      "redes-sociales"
+      "derechos";
+    gap: 30px;
     height: 100vh;
     min-height: 680px;
     .redes-sociales__list li{
