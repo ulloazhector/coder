@@ -38,8 +38,10 @@ h6 {
   position: fixed;
   z-index: 10;
   width: 100%;
+  padding: 0;
 }
 .navbar .container-fluid {
+  padding: 0;
   justify-content: flex-end;
 }
 @media only screen and (max-width: 991px) {
@@ -52,9 +54,10 @@ h6 {
     margin-right: 32px;
   }
   .navbar .container-fluid .navbar-nav {
-    align-items: flex-end;
-    text-align: end;
-    padding-right: 4%;
+    width: 100%;
+    align-items: flex-start;
+    background: #212529;
+    background: linear-gradient(120deg, #212529 0%, #313539 100%);
   }
 }
 .navbar .container-fluid .navbar-toggler {
@@ -71,8 +74,8 @@ h6 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 .navbar .container-fluid .navbar-toggler .menu-icon .stick {
@@ -81,6 +84,9 @@ h6 {
   height: 2px;
   margin: 3px 0;
   transition: all 0.4s ease;
+}
+.navbar .container-fluid .navbar-toggler .menu-icon .stick-mid {
+  width: 20px;
 }
 .navbar .container-fluid .navbar-toggler .menu-icon:hover {
   background-color: #313539;
@@ -106,6 +112,7 @@ h6 {
 }
 .navbar .container-fluid .nav-item {
   width: 100%;
+  padding: 0 15px;
 }
 .navbar .container-fluid .nav-item:hover {
   background-color: #313539;
@@ -145,8 +152,7 @@ h6 {
 .navbar .container-fluid .nav-item .nav-link i {
   transition: all 0.15s;
   margin-right: 20px;
-  padding: 5px;
-  justify-self: flex-start;
+  padding: 10px;
   display: none;
 }
 @media only screen and (max-width: 991px) {

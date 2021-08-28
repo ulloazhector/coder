@@ -6,7 +6,9 @@
     position: fixed;
     z-index: 10;
     width: 100%;
+    padding: 0;
     .container-fluid{
+        padding: 0;
         justify-content: flex-end;
         @include responsive(mob_and_tab){
             .navbar-toggler{
@@ -19,9 +21,11 @@
             }
 
             .navbar-nav{
-                    align-items: flex-end;
-                    text-align: end;
-                    padding-right: 4%;
+                    width: 100%;
+                    align-items: flex-start;
+                    background: rgb(33,37,41);
+                    background: linear-gradient(120deg, #212529 0%, #313539 100%);
+                    
             }
         }
 
@@ -37,13 +41,16 @@
                 @include flex(center, center);
                 flex-direction: column;
                 justify-content: center;
-                @include sizes(40px, 40px);
+                @include sizes(50px, 50px);
                 border-radius: 50%;
                 .stick{
                     background-color: rgba(255, 255, 255, 0.8);
                     @include sizes(24px,2px);
                     margin: 3px 0;
                     transition: all .4s ease;
+                }
+                .stick-mid {
+                    width: 20px;
                 }
                 &:hover{
                     background-color: #313539;
@@ -75,7 +82,7 @@
         }
         .nav-item{
             width: 100%;
-
+            padding: 0 15px;
             &:hover{
                 background-color: #313539;
             }
@@ -116,8 +123,7 @@
                 i{
                     transition: all .15s;
                     margin-right: 20px;
-                    padding: 5px;
-                    justify-self: flex-start;
+                    padding: 10px;
                     display: none;
                     @include responsive(mob_and_tab){
                         display: inline-block;
