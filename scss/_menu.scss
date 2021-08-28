@@ -118,6 +118,10 @@
                     margin-right: 20px;
                     padding: 5px;
                     justify-self: flex-start;
+                    display: none;
+                    @include responsive(mob_and_tab){
+                        display: inline-block;
+                    }
                 }
                 &:hover{
                     color: $prim-clr;
