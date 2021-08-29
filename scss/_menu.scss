@@ -25,17 +25,17 @@
                 margin: 0;
                 margin-right: 32px; //La mitad del width del logo
             }
-
+            
             .navbar-nav{
-                    width: 100%;
-                    align-items: flex-start;
-                    background: rgb(33,37,41);
-                    background: linear-gradient(120deg, #212529 0%, #313539 100%);
+                width: 100%;
+                align-items: flex-start;
+                background: rgb(33,37,41);
+                background: linear-gradient(120deg, #212529 0%, #313539 100%);
                     
             }
         }
 
-
+        
         .navbar-toggler{
             border: transparent;
             box-shadow: none;
@@ -89,12 +89,11 @@
             width: 100%;
             padding: 0;
             &:hover{
-                background-color: #313539;
                 .nav-link{
                     color: $prim-clr;
                 }
             }
-
+            
             .dropdown-menu{
                 background-color: $dark-clr;
                 display: block;
@@ -124,7 +123,7 @@
                     
                 }
             }
-
+            
             .nav-link{
                 transition: color .15s;
                 display: flex;
@@ -132,6 +131,7 @@
                 width: 100%;
                 padding: 8px 16px;
                 align-items: baseline;
+                
                 i{
                     width: 40px;
                     transition: all .15s;
@@ -143,11 +143,18 @@
                     }
                 }
                 &:hover{
+                    background-color: #313539;
+                    border-bottom: 1px solid white;
+                    box-shadow: 0 0 4px 0 rgba(255,255,255,.3);
                     @include responsive(mob_and_tab){
                         i{
                             margin-right: 24px;
                         }
                     }
+                }
+                transition: border .2s;
+                @include responsive(mob_and_tab){
+                    border-bottom: 1px solid #414549;
                 }
             }
         }

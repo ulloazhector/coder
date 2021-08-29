@@ -106,9 +106,6 @@ h6 {
   width: 100%;
   padding: 0;
 }
-.header .navbar .container-fluid .nav-item:hover {
-  background-color: #313539;
-}
 .header .navbar .container-fluid .nav-item:hover .nav-link {
   color: tomato;
 }
@@ -145,6 +142,7 @@ h6 {
   width: 100%;
   padding: 8px 16px;
   align-items: baseline;
+  transition: border 0.2s;
 }
 .header .navbar .container-fluid .nav-item .nav-link i {
   width: 40px;
@@ -158,9 +156,19 @@ h6 {
     display: inline-block;
   }
 }
+.header .navbar .container-fluid .nav-item .nav-link:hover {
+  background-color: #313539;
+  border-bottom: 1px solid white;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
+}
 @media only screen and (max-width: 991px) {
   .header .navbar .container-fluid .nav-item .nav-link:hover i {
     margin-right: 24px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .header .navbar .container-fluid .nav-item .nav-link {
+    border-bottom: 1px solid #414549;
   }
 }
 
