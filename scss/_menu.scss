@@ -124,6 +124,7 @@
                     
                 }
             }
+
             .nav-link{
                 transition: color .15s;
                 display: flex;
@@ -132,6 +133,7 @@
                 padding: 8px 16px;
                 align-items: baseline;
                 i{
+                    width: 40px;
                     transition: all .15s;
                     margin-right: 20px;
                     padding: 10px;
@@ -143,7 +145,7 @@
                 &:hover{
                     @include responsive(mob_and_tab){
                         i{
-                            padding-right: 14px;
+                            margin-right: 24px;
                         }
                     }
                 }
