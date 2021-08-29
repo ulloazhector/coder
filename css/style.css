@@ -887,10 +887,10 @@ h6 {
 /* Fin Nosotros */
 .h1-contacto, .contacto-descr {
   width: 100%;
-  max-width: 592px;
-  padding: 0 20px;
+  max-width: 448px;
+  padding: 0;
   text-align: justify;
-  margin: auto;
+  margin: 20px auto;
 }
 
 #body-contact {
