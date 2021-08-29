@@ -25,6 +25,7 @@ h6 {
   position: fixed;
   width: 100%;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 .header .navbar {
   z-index: 10;
@@ -52,6 +53,37 @@ h6 {
     align-items: flex-start;
     background: #212529;
     background: linear-gradient(120deg, #212529 0%, #313539 100%);
+  }
+  .header .navbar .container-fluid .menu-text-container {
+    width: 20%;
+    height: 0;
+    z-index: 50;
+    position: relative;
+    text-align: end;
+  }
+  .header .navbar .container-fluid .menu-text-container .menu-text {
+    z-index: 50;
+    background-color: red;
+    background-image: linear-gradient(45deg, #ff22c8 40%, yellow 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 5px;
+    width: 100%;
+    font-family: "Oswald";
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+    display: block;
+  }
+  .header .navbar .container-fluid .menu-text-container .text-mon {
+    letter-spacing: 20px;
+  }
+  .header .navbar .container-fluid .menu-text-container .text-ta {
+    letter-spacing: 20px;
+  }
+  .header .navbar .container-fluid .menu-text-container .text-na {
+    letter-spacing: 20px;
   }
 }
 .header .navbar .container-fluid .navbar-toggler {
@@ -106,6 +138,7 @@ h6 {
 .header .navbar .container-fluid .nav-item {
   width: 100%;
   padding: 0;
+  margin-left: 20%;
 }
 .header .navbar .container-fluid .nav-item:hover .nav-link {
   color: tomato;
@@ -143,7 +176,7 @@ h6 {
   width: 100%;
   padding: 8px 16px;
   align-items: baseline;
-  transition: border 0.2s;
+  transition: border 0.1s;
 }
 .header .navbar .container-fluid .nav-item .nav-link i {
   width: 40px;
@@ -159,10 +192,10 @@ h6 {
 }
 .header .navbar .container-fluid .nav-item .nav-link:hover {
   background-color: #313539;
-  border-bottom: 1px solid white;
 }
 @media only screen and (max-width: 991px) {
   .header .navbar .container-fluid .nav-item .nav-link:hover {
+    border-bottom: 1px solid white;
     box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
   }
   .header .navbar .container-fluid .nav-item .nav-link:hover i {
