@@ -24,6 +24,7 @@ h6 {
 .header {
   position: fixed;
   width: 100%;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
 }
 .header .navbar {
   z-index: 10;
@@ -159,9 +160,11 @@ h6 {
 .header .navbar .container-fluid .nav-item .nav-link:hover {
   background-color: #313539;
   border-bottom: 1px solid white;
-  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
 }
 @media only screen and (max-width: 991px) {
+  .header .navbar .container-fluid .nav-item .nav-link:hover {
+    box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
+  }
   .header .navbar .container-fluid .nav-item .nav-link:hover i {
     margin-right: 24px;
   }

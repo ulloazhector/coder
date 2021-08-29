@@ -6,6 +6,7 @@
     position: fixed;
     //top: 0;
     width: 100%;
+    box-shadow: 0 0 30px 10px rgb(0, 0, 0,.2);
 
 .navbar{
     z-index: 10;
@@ -145,8 +146,8 @@
                 &:hover{
                     background-color: #313539;
                     border-bottom: 1px solid white;
-                    box-shadow: 0 0 4px 0 rgba(255,255,255,.3);
                     @include responsive(mob_and_tab){
+                        box-shadow: 0 0 4px 0 rgba(255,255,255,.3);
                         i{
                             margin-right: 24px;
                         }
