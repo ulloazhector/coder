@@ -3,6 +3,36 @@
 
 /* Nosotros */
 
+#body-us{
+    display: grid;
+    grid-template-rows: 80px 60vh auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header-us"
+                         "banner-us"
+                         "main-us"
+                         "section-process-us"
+                         "footer-us";
+    .header-us{
+        grid-area: header-us;   
+    }
+    .banner-us{
+        grid-area: banner-us;   
+    }
+    .main-us{
+        grid-area: main-us;
+    }
+    .section-process-us{
+        grid-area: section-process-us;
+    }
+    .footer-us{
+        grid-area: footer-us;
+    }
+}
+
+
+
+
+
 
 
 .banner{
@@ -56,7 +86,7 @@
 
 
 /* Lista de los 8 procesos de fabricación*/
-.list-container{
+.section-process-us{
     @include flex(center, center);
     flex-direction: column;
     justify-content: center;
@@ -120,6 +150,8 @@
             }  
         }
     }
+
+
     @include responsive(tablet){
         .list-process, .h2-nosotros-process{
             width: 75%;

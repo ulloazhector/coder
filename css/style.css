@@ -30,6 +30,7 @@ h6 {
 .header .navbar {
   z-index: 10;
   padding: 0;
+  height: 80px;
 }
 .header .navbar .container-fluid {
   padding: 0;
@@ -70,7 +71,7 @@ h6 {
 .header .navbar .container-fluid .menu-text-container .menu-text {
   z-index: 50;
   background-color: red;
-  background-image: linear-gradient(60deg, #ff22c8 10%, tomato 50%, yellow 100%);
+  background-image: linear-gradient(135deg, yellow 10%, #ff22c8 70%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   padding: 5px;
@@ -79,7 +80,7 @@ h6 {
   text-transform: uppercase;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  letter-spacing: 20px;
+  letter-spacing: 16px;
   display: block;
 }
 .header .navbar .container-fluid .navbar-toggler {
@@ -512,9 +513,27 @@ h6 {
   }
 }
 
+#body-beers {
+  display: grid;
+  grid-template-rows: 80px 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header-beers" "main-beers" "footer-beers";
+}
+#body-beers .header-beers {
+  grid-area: header-beers;
+}
+#body-beers .main-beers {
+  grid-area: main-beers;
+}
+#body-beers .footer-beers {
+  grid-area: footer-beers;
+}
+
 .encabezado-cervezas {
-  margin-left: 20%;
+  margin: auto;
   font-size: 50px;
+  padding: 10px;
+  max-width: 1220px;
 }
 
 .beer-list {
@@ -649,9 +668,27 @@ h6 {
   }
 }
 
+#body-locations {
+  display: grid;
+  grid-template-rows: 80px 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header-locations" "main-locations" "footer-locations";
+}
+#body-locations .header-locations {
+  grid-area: header-locations;
+}
+#body-locations .main-locations {
+  grid-area: main-locations;
+}
+#body-locations .footer-locations {
+  grid-area: footer-locations;
+}
+
 .encabezado-locales {
-  margin-left: 15%;
-  font-size: 50px;
+  margin: auto;
+  font-size: 40px;
+  max-width: 900px;
+  padding: 10px;
 }
 
 .ubications .ubications-list {
@@ -792,6 +829,28 @@ h6 {
 }
 
 /* Nosotros */
+#body-us {
+  display: grid;
+  grid-template-rows: 80px 60vh auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header-us" "banner-us" "main-us" "section-process-us" "footer-us";
+}
+#body-us .header-us {
+  grid-area: header-us;
+}
+#body-us .banner-us {
+  grid-area: banner-us;
+}
+#body-us .main-us {
+  grid-area: main-us;
+}
+#body-us .section-process-us {
+  grid-area: section-process-us;
+}
+#body-us .footer-us {
+  grid-area: footer-us;
+}
+
 .banner {
   height: 60vh;
 }
@@ -841,7 +900,7 @@ h6 {
 }
 
 /* Lista de los 8 procesos de fabricación*/
-.list-container {
+.section-process-us {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -851,12 +910,12 @@ h6 {
   padding: 0;
   margin: 0;
 }
-.list-container .h2-nosotros-process {
+.section-process-us .h2-nosotros-process {
   height: auto;
   width: 60%;
   min-width: 576px;
 }
-.list-container .list-process {
+.section-process-us .list-process {
   width: 60%;
   min-width: 576px;
   padding: 0;
@@ -865,7 +924,7 @@ h6 {
   flex-direction: column;
   justify-content: space-around;
 }
-.list-container .list-process .list-process-item {
+.section-process-us .list-process .list-process-item {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -875,13 +934,13 @@ h6 {
   position: relative;
   /*Para que .tag sea absoluto*/
 }
-.list-container .list-process .list-process-item .tag {
+.section-process-us .list-process .list-process-item .tag {
   position: absolute;
   /* left: 10px; */
   left: -20px;
   top: 16px;
 }
-.list-container .list-process .list-process-item .tag .num-list {
+.section-process-us .list-process .list-process-item .tag .num-list {
   background-color: #bba451;
   color: white;
   font-size: 18px;
@@ -891,27 +950,27 @@ h6 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 12px -2px, rgba(0, 0, 0, 0.7) 0px 3px 7px -3px;
   display: inline-block;
 }
-.list-container .list-process .list-process-item img {
+.section-process-us .list-process .list-process-item img {
   width: 120px;
   margin: 20px;
   border-radius: 100%;
   border: 4px solid #bba451;
 }
-.list-container .list-process .list-process-item article {
+.section-process-us .list-process .list-process-item article {
   width: 600px;
   margin: 15px;
 }
-.list-container .list-process .list-process-item p {
+.section-process-us .list-process .list-process-item p {
   color: #221f1f;
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
-  .list-container .list-process, .list-container .h2-nosotros-process {
+  .section-process-us .list-process, .section-process-us .h2-nosotros-process {
     width: 75%;
     min-width: 0;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 425px) {
-  .list-container .list-process, .list-container .h2-nosotros-process {
+  .section-process-us .list-process, .section-process-us .h2-nosotros-process {
     width: 85%;
     min-width: 0;
   }

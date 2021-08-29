@@ -16,10 +16,10 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Sobre Nosotros | Cervecería Montaña</title>
 </head>
-<body>
+<body id="body-us">
 
-
-    <header>
+    <!-- Header -->
+    <header class="header header-us">
         <!-- Menú -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -35,13 +35,16 @@
                     </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="menu-text-container">
+                        <span class="menu-text">Montaña</span>
+                    </div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Home</i></a>
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i>Home</i></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-beer"></i> Cervezas</a>
+                                <i class="fas fa-beer"></i>Cervezas</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="cervezas.html#beer-ipa">Pale Ales</a></li>
                                 <li><a class="dropdown-item" href="cervezas.html#beer-scotch">Scotch Ale</a></li>
@@ -49,13 +52,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="locales.html"><i class="far fa-map"></i> Locales</a> 
+                            <a class="nav-link" href="locales.html"><i class="far fa-map"></i>Locales</a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a class="nav-link" href="nosotros.html"><i class="fas fa-users"></i>Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html"><i class="fas fa-phone"></i> Contacto</a>
+                            <a class="nav-link" href="contacto.html"><i class="fas fa-phone"></i>Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -63,16 +66,16 @@
         </nav>
         <!-- Fin Menú -->
     </header>
+    <!-- Fin Header -->
 
 
-
-    <figure class="banner">
+    <figure class="banner banner-us">
         <img src="images/bariloche.jpg" alt="Bariloche">
     </figure>
 
 
     <!-- Acerca de nosotros... -->
-    <section class="acerca-de">
+    <main class="acerca-de main-us">
         <h1 class="encabezado-nosotros">Nosotros</h1>
         <p>
             Para nosotros la Patagonia es un lugar único en el mundo no solo por su geografía,
@@ -91,11 +94,12 @@
             Nuestro proceso de fabricación consiste en 8 pasos.
         </p>
 
-    </section>
-    
+    </main>
+    <!-- Fin Acerca de nosotros... -->
+
 
     <!-- Lista con pasos de fabricación -->
-    <section class="list-container">
+    <section class="section-process-us">
         <h2 class="h2-nosotros-process">Proceso de fabricación</h2>
         <ul class="list-process">
             <li class="list-process-item">
@@ -226,11 +230,11 @@
 
         </ul>
     </section>
-
+    <!-- Fin Lista con pasos de fabricación -->
 
     
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-us">
         <!-- Logo junto con slogan -->
         <section class="logo-footer">
             <img src="images/logo-hops.png" alt="Logo" class="logo-footer__image">

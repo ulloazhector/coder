@@ -16,10 +16,10 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Nuestras cervezas | Cervecería Montaña</title>
 </head>
-<body>
+<body id="body-beers">
 
-
-    <header>
+    <!-- Header -->
+    <header class="header header-beers">
         <!-- Menú -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -35,13 +35,16 @@
                     </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="menu-text-container">
+                        <span class="menu-text">Montaña</span>
+                    </div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Home</i></a>
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i>Home</i></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-beer"></i> Cervezas</a>
+                                <i class="fas fa-beer"></i>Cervezas</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="cervezas.html#beer-ipa">Pale Ales</a></li>
                                 <li><a class="dropdown-item" href="cervezas.html#beer-scotch">Scotch Ale</a></li>
@@ -49,13 +52,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="locales.html"><i class="far fa-map"></i> Locales</a> 
+                            <a class="nav-link" href="locales.html"><i class="far fa-map"></i>Locales</a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a class="nav-link" href="nosotros.html"><i class="fas fa-users"></i>Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html"><i class="fas fa-phone"></i> Contacto</a>
+                            <a class="nav-link" href="contacto.html"><i class="fas fa-phone"></i>Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -63,99 +66,104 @@
         </nav>
         <!-- Fin Menú -->
     </header>
-    
+    <!-- Fin Header -->
 
 
+    <!-- Main section -->
+    <main class="main-beers">
 
-   
-    <h1 class="encabezado-cervezas">Cervezas</h1>
-    <!-- Tres tipos de cerveza -->
-    <section class="beer-list-container">
-        <ul class="beer-list">
-            <li class="beer-list-item" id="beer-ipa">
-                <div class="beer-info">
-                    <ul>
-                        <li>Alcohol 6.5%</li>
-                        <li>IBU 56</li>
-                        <li>Rubia</li>
-                    </ul>
-                </div>
-                <img src="images/american-ipa.jpg" alt="American IPA" class="image-beer">
-                <h2 class="name">Indian Pale Ale</h2>
-                <p class="descr">
-                    Una Pale Ale decididamente amarga y lupulada.
-                    Este estilo se logra con una gran base de maltas que balancean las abundantes adiciones de lúpulo en todas las etapas del proceso.
-                    Se destaca su carácter resionos, un toque cítrico y frutal.
-                </p>
-                <button class="buy-btn">Comprar</button>
-            </li>
+        <h1 class="encabezado-cervezas">Cervezas</h1>
+        <!-- Cuatro tipos de cerveza -->
+        <section class="beer-list-container">
+            <ul class="beer-list">
+                
+
+                <!-- Cerveza #1 -->
+                <li class="beer-list-item" id="beer-ipa">
+                    <div class="beer-info">
+                        <ul>
+                            <li>Alcohol 6.5%</li>
+                            <li>IBU 56</li>
+                            <li>Rubia</li>
+                        </ul>
+                    </div>
+                    
+                    <img src="images/american-ipa.jpg" alt="American IPA" class="image-beer">
+                    <h2 class="name">Indian Pale Ale</h2>
+                    <p class="descr">
+                        Una Pale Ale decididamente amarga y lupulada.
+                        Este estilo se logra con una gran base de maltas que balancean las abundantes adiciones de lúpulo en todas las etapas del proceso.
+                        Se destaca su carácter resionos, un toque cítrico y frutal.
+                    </p>
+                    <button class="buy-btn">Comprar</button>
+                </li>
+                
+                
+                <!-- Cerveza #2 -->
+                <li class="beer-list-item" id="beer-cream-stout">
+                    <div class="beer-info">
+                        <ul>
+                            <li>Alcohol 4.5%</li>
+                            <li>IBU 35</li>
+                            <li>Negra</li>
+                        </ul>
+                    </div>
+                    <img src="images/cream-stout.jpg" alt="Cream Stout" class="image-beer"> 
+                    <h2 class="name">Cream Stout</h2>
+                    <p class="descr">
+                        Originalmente el estilo proviene de las Islas Británicas.
+                        Se elabora mediante proceso Ale, a lo que se llama también fermentación alta.
+                        Es de un color profundamente oscuro, debido al uso de maltas tostadas y negras.
+                        Esto confiere el sabor seco a café y cereales tostados. 
+                    </p>
+                    <button class="buy-btn">Comprar</button>
+                </li>
+                
+                
+                <!-- Cerveza #3 -->
+                <li class="beer-list-item" id="beer-scotch">
+                    <div class="beer-info">
+                        <ul>
+                            <li>Alcohol 5.5%</li>
+                            <li>IBU 37</li>
+                            <li>Roja</li>
+                        </ul>
+                    </div>
+                    <img src="images/scottish-ale.jpg" alt="Scottish Ale" class="image-beer">
+                    <h2 class="name">Scotch Ale</h2>
+                    <p class="descr">
+                        Es un estilo con origen en Escocia. Históricamente era imposible cultivar lúpulo en este lugar, por lo tanto en cervezas elaboradas allí, la malta siempre predomina. Nuestra Scotch es de proceso Ale, y hace una perfecta referencia a la historia de este producto. La utilización de maltas caramelizadas aportan un sabor dulce y la malta tostada en bajas cantidades, un leve sabor tostado. 
+                    </p>
+                    <button class="buy-btn">Comprar</button>
+                </li>
+                
+
+                <!-- Cerveza #4 -->
+                <li class="beer-list-item">
+                    <div class="beer-info">
+                        <ul>
+                            <li>Alcohol 4.5%</li>
+                            <li>IBU 15</li>
+                            <li>Rubia</li>
+                        </ul>
+                    </div>
+                    <img src="images/golden-ale.jpg" alt="Golden Ale" class="image-beer">
+                    <h2 class="name">Golden Ale</h2>
+                    <p class="descr">
+                        Una cerveza fácil de beber con interesantes notas a maltas claras y dulces, balanceada con un toque de lúpulo, levemente cítrico y floral. Una pinta refrescante de sabores suaves y agradables.
+                    </p>
+                    <button class="buy-btn">Comprar</button>
+                </li>
             
             
-            <li class="beer-list-item" id="beer-cream-stout">
-                <div class="beer-info">
-                    <ul>
-                        <li>Alcohol 4.5%</li>
-                        <li>IBU 35</li>
-                        <li>Negra</li>
-                    </ul>
-                </div>
-                <img src="images/cream-stout.jpg" alt="Cream Stout" class="image-beer"> 
-                <h2 class="name">Cream Stout</h2>
-                <p class="descr">
-                    Originalmente el estilo proviene de las Islas Británicas.
-                    Se elabora mediante proceso Ale, a lo que se llama también fermentación alta.
-                    Es de un color profundamente oscuro, debido al uso de maltas tostadas y negras.
-                    Esto confiere el sabor seco a café y cereales tostados. 
-                </p>
-                <button class="buy-btn">Comprar</button>
-            </li>
-            
-            
-            <li class="beer-list-item" id="beer-scotch">
-                <div class="beer-info">
-                    <ul>
-                        <li>Alcohol 5.5%</li>
-                        <li>IBU 37</li>
-                        <li>Roja</li>
-                    </ul>
-                </div>
-                <img src="images/scottish-ale.jpg" alt="Scottish Ale" class="image-beer">
-                <h2 class="name">Scotch Ale</h2>
-                <p class="descr">
-                    Es un estilo con origen en Escocia. Históricamente era imposible cultivar lúpulo en este lugar, por lo tanto en cervezas elaboradas allí, la malta siempre predomina. Nuestra Scotch es de proceso Ale, y hace una perfecta referencia a la historia de este producto. La utilización de maltas caramelizadas aportan un sabor dulce y la malta tostada en bajas cantidades, un leve sabor tostado. 
-                </p>
-                <button class="buy-btn">Comprar</button>
-            </li>
-            
-            <li class="beer-list-item">
-                <div class="beer-info">
-                    <ul>
-                        <li>Alcohol 4.5%</li>
-                        <li>IBU 15</li>
-                        <li>Rubia</li>
-                    </ul>
-                </div>
-                <img src="images/golden-ale.jpg" alt="Golden Ale" class="image-beer">
-                <h2 class="name">Golden Ale</h2>
-                <p class="descr">
-                    Una cerveza fácil de beber con interesantes notas a maltas claras y dulces, balanceada con un toque de lúpulo, levemente cítrico y floral. Una pinta refrescante de sabores suaves y agradables.
-                </p>
-                <button class="buy-btn">Comprar</button>
-            </li>
-
-
-        </ul>
-    </section>
-
-
-
-
-
-
+            </ul>
+        </section>
+    </main>
+    <!-- Fin Main section -->
 
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-beers">
         <!-- Logo junto con slogan -->
         <section class="logo-footer">
             <img src="images/logo-hops.png" alt="Logo" class="logo-footer__image">
