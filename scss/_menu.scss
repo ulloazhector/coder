@@ -1,12 +1,16 @@
 @import 'mixins';
 @import 'tools';
 
+.header{
 
-.navbar{
     position: fixed;
-    z-index: 10;
+    //top: 0;
+
     width: 100%;
+.navbar{
+    z-index: 10;
     padding: 0;
+    padding-bottom: 6px;
     .container-fluid{
         .logo-image{
             @include sizes(64px,64px);
@@ -99,7 +103,7 @@
                 height: 0px;
                 padding: 0;
                 border: 0;
-                transition: all .2s;
+                transition: all .1s;
                 .dropdown-item{
                     display: none;
                 }
@@ -147,4 +151,5 @@
             }
         }
     }
+}
 }

@@ -1,4 +1,4 @@
-.encabezado-contacto, .contacto-descr{
+.h1-contacto, .contacto-descr{
     width: 100%;
     max-width: 592px;
     padding: 0 20px;
@@ -9,3 +9,21 @@
 //     margin: 20px auto;
 // }
 
+#body-contact{
+    //height: 100vh;
+    display: grid;
+    grid-template-rows: 80px 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header-contact"
+                         "main-contact"
+                         "footer-contact";
+    .header-contact{
+        grid-area: header-contact;   
+    }
+    .main-contact{
+        grid-area: main-contact;
+    }
+    .footer-contact{
+        grid-area: footer-contact;
+    }
+}

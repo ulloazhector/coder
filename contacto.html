@@ -17,9 +17,9 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Contactanos | Cervecería Montaña</title>
 </head>
-<body>
+<body id="body-contact">
 
-    <header>
+    <header class="header header-contact">
         <!-- Menú -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -66,71 +66,82 @@
 
 
     <!-- Contacto... -->
-   
-    <!-- Acá incluiría formularios, para luego comunicarme con el cliente -->
-    <h1 class="encabezado-contacto">
-        Formulario de contacto
-    </h1>
-    <p class="contacto-descr">
-        No dudes en ponerte en contacto con nosotros si tienes dudas o sugerencias.
-        Si quieres trabajar con nosotros, postulate aquí.
-    </p>
+    <main class="main-contact">
 
-
-
-    <!-- Formulario hecho con bs -->
-    <div class="container d-flex justify-content-center mb-5 mt-5">
-        <div class="row">
-
-            <div class="col">
-
-                <div class="row">
-
-                    <div class="col-sm-6">
-                        <div class="form-group mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-                            <input required="" type="text" class="form-control" id="id_name" name="name" placeholder="Nombres" value="">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="form-group mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
-                            <input required="" type="text" class="form-control" id="id_lastname" name="email" placeholder="Apellidos" value="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlInput2" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="+12 3456 789012">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea3" class="form-label">Consulta</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
-                </div>
-
-                <div class="text-center">
-                    <a href="#" class="btn btn-primary">Enviar</a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
+        <article class="article-contact">
+            <h1 class="h1-contacto">
+                Contactanos
+            </h1>
+            <p class="contacto-descr">
+                No dudes en ponerte en contacto con nosotros si tienes dudas o sugerencias.
+                Si quieres trabajar con nosotros, postulate aquí.
+            </p>
+        </article>
         
+        
+        
+        <!-- Formulario hecho con bs -->
+        <section class="form-contact">
+            <div class="container d-flex justify-content-center mb-5 mt-5">
+                <div class="row">
+                    
+                    <div class="col">
+                        
+                        <div class="row">
+                            
+                            <div class="col-sm-6">
+                                <!-- Label Nombres -->
+                                <div class="form-group mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+                                    <input required="" type="text" class="form-control" id="id_name" name="name" placeholder="Nombres" value="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Label Apellidos -->
+                                <div class="form-group mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+                                    <input required="" type="text" class="form-control" id="id_lastname" name="last_name" placeholder="Apellidos" value="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Label Email -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                        </div>
+                        
+                        <!-- Label Tel -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput2" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="exampleFormControlInput2" placeholder="+12 3456 789012">
+                        </div>
+                        
+                        <!-- Label Consulta -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea3" class="form-label">Consulta</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea3" rows="5"></textarea>
+                        </div>
+                        
+                        <!-- Botón Enviar -->
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary">Enviar</a>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-
-
+    </main>
+    
+    
+    
+    
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-contact">
         <!-- Logo junto con slogan -->
         <section class="logo-footer">
             <img src="images/logo-hops.png" alt="Logo" class="logo-footer__image">
@@ -141,7 +152,7 @@
         <!-- Sección Contacto -->
         <section class="contacto">
             <ul class="contacto__list">
-                <li>Información de contacto</li>
+                <li class="contact__first-item">Información de contacto</li>
                 <li><i class="far fa-envelope"></i> infocontacto@gmail.com</li>
                 <li><i class="fas fa-phone"></i> +54 9 2944 345678</li>
                 <li><i class="fas fa-map-marker-alt"></i> Avenida Siempreviva 742</li>
@@ -152,7 +163,7 @@
         <!-- Sección FAQs -->
         <section class="preguntas">
             <ul class="preguntas__list">
-                <li>Sobre nosotros</li>
+                <li class="preguntas__first-item">Sobre nosotros</li>
                 <li><a href="cervezas.html">Nuestras cervezas</a></li>
                 <li><a href="nosotros.html">¿Quiénes somos?</a></li>
                 <li><a href="locales.html">¿Dónde estamos?</a></li>
@@ -177,6 +188,7 @@
             <p class="derechos__text">© 2021 Montaña Brew Company. Reservados todos los derechos.</p>
         </section>
     </footer>
+    <!-- Fin Footer -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>

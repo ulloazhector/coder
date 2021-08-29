@@ -12,8 +12,9 @@
   justify-items: center;
   align-items: center;
   gap: 15px;
+  margin: 0;
   padding: 20px 0 0 0;
-  background-color: #222222;
+  background-color: #121212;
 
   .logo-footer {
     grid-area: logo-slogan;
@@ -38,7 +39,7 @@
       @include mandp(0, 0);
       width: auto;
       list-style: none;
-      &::first-line {
+      .contact__first-item {
         line-height: 50px;
         color: $prim-clr;
       }
@@ -55,7 +56,7 @@
     .preguntas__list {
       @include mandp(0, 0);
       list-style: none;
-      &::first-line {
+      .preguntas__first-item {
         line-height: 50px;
         color: $prim-clr;
       }
@@ -126,7 +127,7 @@
         top: 20px;
         background-color: transparent;
         z-index: 0;
-        transition: background .31s;
+        transition: background .3s;
       }
       &:hover{
         background-color: #313539;
@@ -154,14 +155,15 @@
 
   .derechos{
     grid-area: derechos;
+    align-self: end;
+    margin: 0;
+    padding:20px 0;
     width: 100%;
-    font-size: 12px;
-    height: 30px;
+    background-color: #0c0c0c;
     .derechos__text{
-      padding: 20px;
-      padding-right: 50px;
-      margin: 0;
-      background-color: #181818;
+      font-size: 12px;
+      padding: 0 50px;
+      margin:0;
       color: #888;
       //font-family: 'Open Sans';
       text-align: end;
