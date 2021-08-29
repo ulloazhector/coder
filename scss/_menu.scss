@@ -101,15 +101,16 @@
                 height: 0px;
                 padding: 0;
                 border: 0;
-                transition: all .1s;
+                transition: all .3s;
                 .dropdown-item{
                     display: none;
                 }
+                //Submenu
                 &.show{
                     overflow: hidden;
                     .dropdown-item{
                         display: block;
-                        transition: all .1s;
+                        transition: background .2s;
                         text-align: center;
                         &:hover{
                             background-color: #dcdbdf;
@@ -142,7 +143,7 @@
                 &:hover{
                     @include responsive(mob_and_tab){
                         i{
-                            padding-right: 12px;
+                            padding-right: 14px;
                         }
                     }
                 }

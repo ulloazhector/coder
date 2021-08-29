@@ -118,7 +118,7 @@ h6 {
   height: 0px;
   padding: 0;
   border: 0;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 .header .navbar .container-fluid .nav-item .dropdown-menu .dropdown-item {
   display: none;
@@ -132,7 +132,7 @@ h6 {
 }
 .header .navbar .container-fluid .nav-item .dropdown-menu.show .dropdown-item {
   display: block;
-  transition: all 0.1s;
+  transition: background 0.2s;
   text-align: center;
 }
 .header .navbar .container-fluid .nav-item .dropdown-menu.show .dropdown-item:hover {
@@ -159,7 +159,7 @@ h6 {
 }
 @media only screen and (max-width: 991px) {
   .header .navbar .container-fluid .nav-item .nav-link:hover i {
-    padding-right: 12px;
+    padding-right: 14px;
   }
 }
 
