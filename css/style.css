@@ -28,7 +28,6 @@ h6 {
 .header .navbar {
   z-index: 10;
   padding: 0;
-  padding-bottom: 6px;
 }
 .header .navbar .container-fluid {
   padding: 0;
@@ -57,7 +56,6 @@ h6 {
 .header .navbar .container-fluid .navbar-toggler {
   border: transparent;
   box-shadow: none;
-  transition: all 0.2s ease;
   height: auto;
   padding: 0;
 }
@@ -134,7 +132,7 @@ h6 {
 }
 .header .navbar .container-fluid .nav-item .dropdown-menu.show .dropdown-item {
   display: block;
-  transition: all 0.25s;
+  transition: all 0.1s;
   text-align: center;
 }
 .header .navbar .container-fluid .nav-item .dropdown-menu.show .dropdown-item:hover {
@@ -161,7 +159,7 @@ h6 {
 }
 @media only screen and (max-width: 991px) {
   .header .navbar .container-fluid .nav-item .nav-link:hover i {
-    padding-right: 16px;
+    padding-right: 12px;
   }
 }
 

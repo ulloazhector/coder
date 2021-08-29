@@ -5,12 +5,11 @@
 
     position: fixed;
     //top: 0;
-
     width: 100%;
+
 .navbar{
     z-index: 10;
     padding: 0;
-    padding-bottom: 6px;
     .container-fluid{
         .logo-image{
             @include sizes(64px,64px);
@@ -40,7 +39,6 @@
         .navbar-toggler{
             border: transparent;
             box-shadow: none;
-            transition: all .2s ease;
             height: auto;
             padding: 0;
             .menu-icon{
@@ -111,7 +109,7 @@
                     overflow: hidden;
                     .dropdown-item{
                         display: block;
-                        transition: all .25s;
+                        transition: all .1s;
                         text-align: center;
                         &:hover{
                             background-color: #dcdbdf;
@@ -144,7 +142,7 @@
                 &:hover{
                     @include responsive(mob_and_tab){
                         i{
-                            padding-right: 16px;
+                            padding-right: 12px;
                         }
                     }
                 }
