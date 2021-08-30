@@ -208,6 +208,23 @@ h6 {
     border-bottom: 1px solid #414549;
   }
 }
+@media only screen and (max-width: 991px) {
+  .header .navbar .container-fluid .nav-item-1:hover .nav-link {
+    color: #ff22c8;
+  }
+  .header .navbar .container-fluid .nav-item-2:hover .nav-link {
+    color: #ff5897;
+  }
+  .header .navbar .container-fluid .nav-item-3:hover .nav-link {
+    color: #ff9164;
+  }
+  .header .navbar .container-fluid .nav-item-4:hover .nav-link {
+    color: #ffc633;
+  }
+  .header .navbar .container-fluid .nav-item-5:hover .nav-link {
+    color: #ffff00;
+  }
+}
 
 .main-section {
   position: relative;
