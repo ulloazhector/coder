@@ -101,14 +101,14 @@
       border-radius: 20px;
       background-color: white;
       margin-bottom: 20px;
-      border: 2px solid #C93636;
-      color: #C93636;
+      border: 2px solid $alt-clr;
+      color: $alt-clr;
       margin-right: 10px;
       @include sizes(120px, 40px);
       transition: all 0.2s;
       &:hover {
         color: white;
-        background-color: #C93636;
+        background-color: $alt-clr;
       }
     }
   }

@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'tools';
 
 .products-section{
     @include flex(center,center);
@@ -22,14 +23,14 @@
         .product__button {
             font-size: 14px;
             padding: 10px 20px;
-            border: 2px solid #C93636;
+            border: 2px solid $alt-clr;
             border-radius: 5px;
             background-color: #fff;
-            color: #C93636;
+            color: $alt-clr3;
             transition: all .2s;
             &:hover{
                 cursor: pointer;
-                background-color: #C93636;
+                background-color: $alt-clr;
                 color: #fff;
             }
         }
