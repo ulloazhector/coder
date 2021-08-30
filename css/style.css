@@ -225,6 +225,25 @@ h6 {
   }
 }
 
+#body-index {
+  display: grid;
+  grid-template-rows: 74px 60vh auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header-index" "main-index" "products-section-index" "footer-index";
+}
+#body-index .header-index {
+  grid-area: header-index;
+}
+#body-index .main-index {
+  grid-area: main-index;
+}
+#body-index .products-section-index {
+  grid-area: products-section-index;
+}
+#body-index .footer-index {
+  grid-area: footer-index;
+}
+
 .main-section {
   position: relative;
 }

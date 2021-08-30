@@ -1,5 +1,29 @@
 @import 'mixins';
 
+
+#body-index{
+    display: grid;
+    grid-template-rows: 74px 60vh auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header-index"
+                         "main-index"
+                         "products-section-index"
+                         "footer-index";
+    .header-index{
+        grid-area: header-index;   
+    }
+    .main-index{
+        grid-area: main-index;
+    }
+    .products-section-index{
+        grid-area: products-section-index;
+    }
+    .footer-index{
+        grid-area: footer-index;
+    }
+}
+
+
 .main-section{
     position: relative;
 }
