@@ -30,7 +30,6 @@ h6 {
 .header .navbar {
   z-index: 10;
   padding: 0;
-  height: 80px;
 }
 .header .navbar .container-fluid {
   padding: 0;
@@ -687,7 +686,7 @@ h6 {
 
 #body-locations {
   display: grid;
-  grid-template-rows: 80px 1fr auto;
+  grid-template-rows: 74px 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header-locations" "main-locations" "footer-locations";
 }
@@ -848,7 +847,7 @@ h6 {
 /* Nosotros */
 #body-us {
   display: grid;
-  grid-template-rows: 80px 50vh auto auto auto;
+  grid-template-rows: 74px 50vh auto auto auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header-us" "banner-us" "main-us" "section-process-us" "footer-us";
 }
@@ -1036,7 +1035,7 @@ h6 {
 
 #body-contact {
   display: grid;
-  grid-template-rows: 80px 1fr auto;
+  grid-template-rows: 74px 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header-contact" "main-contact" "footer-contact";
 }
