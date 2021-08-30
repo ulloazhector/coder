@@ -332,13 +332,15 @@ h6 {
 .products-section .product .product__button {
   font-size: 14px;
   padding: 10px 20px;
-  border: 2px solid tomato;
+  border: 2px solid #C93636;
+  border-radius: 5px;
   background-color: #fff;
-  color: tomato;
+  color: #C93636;
+  transition: all 0.2s;
 }
 .products-section .product .product__button:hover {
   cursor: pointer;
-  background-color: tomato;
+  background-color: #C93636;
   color: #fff;
 }
 .products-section .product p {
@@ -607,7 +609,7 @@ h6 {
   white-space: nowrap;
 }
 .beer-list .beer-list-item:hover .beer-info {
-  background-color: tomato;
+  background-color: #C93636;
   width: 42.85%;
 }
 .beer-list .beer-list-item:hover .beer-info ul {
@@ -641,8 +643,8 @@ h6 {
   border-radius: 20px;
   background-color: white;
   margin-bottom: 20px;
-  border: 2px solid tomato;
-  color: tomato;
+  border: 2px solid #C93636;
+  color: #C93636;
   margin-right: 10px;
   width: 120px;
   height: 40px;
@@ -650,7 +652,7 @@ h6 {
 }
 .beer-list .beer-list-item .buy-btn:hover {
   color: white;
-  background-color: tomato;
+  background-color: #C93636;
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .beer-list {

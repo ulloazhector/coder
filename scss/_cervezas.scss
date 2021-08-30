@@ -68,7 +68,7 @@
     }
     &:hover {
       .beer-info {
-        background-color: $prim-clr;
+        background-color: #C93636;
         width: 42.85%;
         ul {
           flex-direction: column;
@@ -101,14 +101,14 @@
       border-radius: 20px;
       background-color: white;
       margin-bottom: 20px;
-      border: 2px solid $prim-clr;
-      color: $prim-clr;
+      border: 2px solid #C93636;
+      color: #C93636;
       margin-right: 10px;
       @include sizes(120px, 40px);
       transition: all 0.2s;
       &:hover {
         color: white;
-        background-color: $prim-clr;
+        background-color: #C93636;
       }
     }
   }
