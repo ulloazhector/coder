@@ -1,236 +1,20 @@
 @import 'mixins';
 @import 'tools';
 
-// .header{
-
-//     position: fixed;
-//     width: 100%;
-//     box-shadow: 0 0 30px 10px rgb(0, 0, 0,.2);
-//     z-index: 50;
-
-//     .navbar{
-//         z-index: 10;
-//         padding: 0;
-//         .container-fluid{
-//             .logo-image{
-//                 @include sizes(64px,64px);
-//             }
-//             padding: 0;
-//             justify-content: flex-end;
-//             @include responsive(mob_and_tab){
-//                 .navbar-toggler{
-//                     flex-basis: 20%;
-//                 }
-//                 .navbar-brand{
-//                     flex-basis: 30%;
-//                     margin: 0;
-//                     margin-right: 32px; //La mitad del width del logo
-//                 }
-                
-//                 .navbar-nav{
-//                     width: 100%;
-//                     align-items: flex-start;
-//                     background: rgb(33,37,41);
-//                     background: linear-gradient(120deg, #212529 0%, #313539 100%);
-//                 }
-                
-//             }
-//             .menu-text-container{
-
-//                 width: 10%;
-//                 height: 0;
-//                 z-index: 50;
-//                 position: relative;
-//                 display: none;
-//                 @include responsive(mob_and_tab){
-//                     display: block;
-//                 }
-//                 .menu-text{
-//                     z-index: 50;
-//                     background-color: red;
-//                     background-image: linear-gradient(135deg, rgb(255, 255, 0) 10%,  rgb(255, 34, 200) 70%);
-//                     -webkit-text-fill-color: transparent;
-//                     -webkit-background-clip: text;
-//                     padding: 5px;
-//                     font-family: 'Oswald';
-//                     font-size: 24px;
-//                     text-transform: uppercase;
-//                     writing-mode: vertical-lr;
-//                     transform: rotate(180deg);
-//                     letter-spacing: 16px;
-//                     display: block;
-//                 }
-//             }
-
-            
-//             .navbar-toggler{
-//                 border: transparent;
-//                 box-shadow: none;
-//                 height: auto;
-//                 padding: 0;
-//                 .menu-icon{
-//                     margin: auto;
-//                     @include flex(center, center);
-//                     flex-direction: column;
-//                     justify-content: center;
-//                     @include sizes(50px, 50px);
-//                     border-radius: 50%;
-//                     .stick{
-//                         background-color: rgba(255, 255, 255, 0.8);
-//                         @include sizes(24px,2px);
-//                         margin: 3px 0;
-//                         transition: all .4s ease;
-//                     }
-//                     .stick-mid {
-//                         width: 20px;
-//                     }
-//                     &:hover{
-//                         background-color: #313539;
-//                         .stick{
-//                             background-color: $prim-clr;
-//                         }
-//                     }
-//                 }
-
-
-//                 &:focus{
-//                     border: transparent;
-//                     box-shadow: none;
-//                 }
-//                 &[aria-expanded="true"]{
-//                     .stick{
-//                         background-color: $prim-clr;
-//                     }
-//                     .stick-up{
-//                         transform: translateY(8px) rotate(45deg);
-//                     }
-//                     .stick-mid{
-//                         width: 0;
-//                     }
-//                     .stick-down{
-//                         transform: translateY(-8px) rotate(-45deg);
-//                     }
-//                 }
-//             }
-//             .nav-item{
-//                 width: 85%;
-//                 padding: 0;
-//                 @include responsive(mob_and_tab){
-
-//                     margin-left: 15%;
-//                 }
-//                 &:hover{
-//                     .nav-link{
-//                         color: $prim-clr;
-//                     }
-//                 }
-                
-//                 .dropdown-menu{
-//                     background-color: $dark-clr;
-//                     display: block;
-//                     height: 0px;
-//                     padding: 0;
-//                     border: 0;
-//                     transition: all .3s;
-//                     .dropdown-item{
-//                         display: none;
-//                     }
-//                     //Submenu
-//                     &.show{
-//                         overflow: hidden;
-//                         .dropdown-item{
-//                             display: block;
-//                             transition: background .2s;
-//                             text-align: center;
-//                             &:hover{
-//                                 background-color: #dcdbdf;
-//                             }
-//                         }
-                        
-//                         box-shadow: 0 30px 30px 0 rgba(0,0,0,.3);
-//                         background: rgba(255,255,255,.92);
-//                         display: block;
-//                         height: 32px*3; // 3 elementos
-                        
-//                     }
-//                 }
-                
-//                 .nav-link{
-//                     transition: color .15s;
-//                     display: flex;
-//                     justify-content: flex-start;
-//                     width: 100%;
-//                     padding: 8px 16px;
-//                     align-items: baseline;
-                    
-//                     i{
-//                         width: 40px;
-//                         transition: all .15s;
-//                         margin-right: 20px;
-//                         padding: 10px;
-//                         display: none;
-//                         @include responsive(mob_and_tab){
-//                             display: inline-block;
-//                         }
-//                     }
-//                     &:hover{
-//                         background-color: #313539;
-//                         @include responsive(mob_and_tab){
-//                             border-bottom: 1px solid white;
-//                             box-shadow: 0 0 4px 0 rgba(255,255,255,.3);
-//                             i{
-//                                 margin-right: 24px;
-//                             }
-//                         }
-//                     }
-//                     transition: border .1s;
-//                     @include responsive(mob_and_tab){
-//                         border-bottom: 1px solid #414549;
-//                     }
-//                 }
-//             }
-//             @include responsive (mob_and_tab){
-//                 .nav-item-1:hover{
-//                     .nav-link{
-//                         color: #ff22c8;
-//                     }
-//                 }
-//                 .nav-item-2:hover{
-//                     .nav-link{
-//                         color: #ff5897;
-//                     }
-//                 }
-//                 .nav-item-3:hover{
-//                     .nav-link{
-//                         color: #ff9164;
-//                     }
-//                 }
-//                 .nav-item-4:hover{
-//                     .nav-link{
-//                         color: #ffc633;
-//                     }
-//                 }
-//                 .nav-item-5:hover{
-//                     .nav-link{
-//                         color: #ffff00;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
 
 .header{
     position: fixed;
+    z-index: 100;
     @include sizes(100%, 74px);
+    box-shadow: 0 0 30px 5px rgb(0, 0, 0,.5);
     
     .navbar{
         padding: 0;
         height: 74px;
         
         .container-fluid{
-            background-color: #272747;
+            background-color:#272747;
+            background: linear-gradient(0deg, lighten(#272747,5%), darken(#272747,5%));
             z-index: 10;
             padding: 0;
 
@@ -250,6 +34,7 @@
                         position: relative;
                         border-radius: 4px;
                         padding: 8px 20px;
+                        font-family: "Open Sans", sans-serif;
                         
                         &::after{
                             position: absolute;
@@ -471,7 +256,6 @@
 
                 .navbar-nav{
                     justify-content: center;
-                    background: linear-gradient(210deg, #503c97 0%, #302e31 100%); ;
 
                     .nav-item{
 

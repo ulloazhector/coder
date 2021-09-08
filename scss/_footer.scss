@@ -2,216 +2,240 @@
 @import "tools";
 
 /* Footer */
+
 .footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "logo-slogan    contacto       preguntas"
-    "redes-sociales redes-sociales redes-sociales"
-    "derechos       derechos       derechos";
-  justify-items: center;
-  align-items: center;
-  gap: 15px;
-  margin: 0;
-  padding: 20px 0 0 0;
-  background-color: #121212;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		"logo-slogan    contacto       preguntas"
+		"redes-sociales redes-sociales redes-sociales"
+		"derechos       derechos       derechos";
+	justify-items: center;
+	align-items: center;
+	gap: 15px;
+	margin: 0;
+	padding: 20px 0 0 0;
+	background-color: #121212;
 
-  .logo-footer {
-    grid-area: logo-slogan;
-    .logo-footer__image {
-      justify-content: center;
-      @include sizes(128px, 128px);
-    }
-    .logo-footer__slogan {
-      @include mandp(0, 0);
-      text-align: center;
-      color: white;
+	.logo-footer {
+		grid-area: logo-slogan;
 
-      .fa-heart {
-        transition: .5s;
-        color: rgb(224, 49, 49);
-        animation: latido 1.1s infinite;
+		.logo-footer__image {
+			justify-content: center;
+			@include sizes(128px, 128px);
+		}
 
-        @keyframes latido {
-          0%   { transform: scale(1); }
-          10%  { transform: scale(1.25);}
-          20%  { transform: scale(1);}
-          30%  { transform: scale(1.25);}
-          40%  { transform: scale(1); }
-          100% { transform: scale(1); }
-        }
-      }
-    }
-  }
+		.logo-footer__slogan {
+			@include mandp(0, 0);
+			text-align: center;
+			color: white;
 
-  .contacto {
-    color: white;
-    grid-area: contacto;
-    .contacto__list {
-      @include mandp(0, 0);
-      width: auto;
-      list-style: none;
-      .contact__first-item {
-        line-height: 50px;
-        color: $prim-clr;
-      }
-      i {
-        width: 16px;
-        margin-right: 16px;
-      }
-    }
-  }
+			.fa-heart {
+				transition: .5s;
+				color: rgb(224, 49, 49);
+				animation: latido 1.1s infinite;
 
-  .preguntas {
-    grid-area: preguntas;
+				@keyframes latido {
+					0%   { transform: scale(1); }
+					10%  { transform: scale(1.3);}
+					20%  { transform: scale(1);}
+					30%  { transform: scale(1.3);}
+					40%  { transform: scale(1); }
+					100% { transform: scale(1); }
+				}
+			}
+		}
+	}
 
-    .preguntas__list {
-      @include mandp(0, 0);
-      list-style: none;
-      .preguntas__first-item {
-        line-height: 50px;
-        color: $prim-clr;
-      }
-    }
-    a {
-      color: white;
-      text-decoration: none;
-      transition: all 0.15s;
-      &:hover {
-        color: $prim-clr;
-        text-decoration: underline;
-      }
-    }
-  }
+	.contacto {
+		color: white;
+		grid-area: contacto;
+
+		.contacto__list {
+			@include mandp(0, 0);
+			width: auto;
+			list-style: none;
+			font-size: 14px;
+			font-family: "Open Sans", sans-serif;
+			
+			.contact__first-item {
+				font-size: 16px;
+				line-height: 50px;
+				color: $prim-clr;
+			}
 
 
+			i {
+				width: 16px;
+				margin-right: 8px;
+			}
+			
+		}
+	}
 
-  .redes-sociales {
-    grid-area: redes-sociales;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+	.preguntas {
+		grid-area: preguntas;
 
-    .redes-sociales__list {
-      @include mandp(0, 0);
-      list-style: none;
-      display: flex;
-      @include flex(center, flex-end);
-      li{
-        @include sizes(50px, 50px);
-      }
+		.preguntas__list {
+			@include mandp(0, 0);
+			list-style: none;
 
-      .redes-sociales__text{
-        text-decoration: none;
-        font-size: 10px;
-        color: white;
-        opacity: 0.5;
-      }
+			.preguntas__first-item {
+				font-family: "Open Sans", sans-serif;
+				font-size: 16px;
+				line-height: 50px;
+				color: $prim-clr;
+			}
+		}
+		
+		a {
+			font-family: "Open Sans", sans-serif;
+			font-size: 14px;
+			color: white;
+			text-decoration: none;
+			transition: all 0.15s;
 
-    }
-
-
-    .followus {
-      color: white;
-      text-align: center;
-      margin: 10px;
-    }
-
-
-    a {
-      color: white;
-      padding: 8px 10px;
-      text-decoration: none;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      @include flex(center, center);
-      border-radius: 5px;
-      .fab{
-        padding: 5px 0;
-      }
-      .fa-youtube{
-        z-index: 1;
-      }
-      .play-ytb{
-        position: absolute;
-        @include sizes(8px, 6px);
-        top: 20px;
-        background-color: transparent;
-        z-index: 0;
-        transition: background .3s;
-      }
-      &:hover{
-        background-color: #313539;
-        
-        // Coloreo los iconos en el hover
-        @each $soc-net, $clr in $soc-network-color {
-          .fa-#{$soc-net} {
-            transition: color .3s;
-            color: $clr;
-          }
-          .play-ytb{
-            background-color: white;
-          }
-        }
-      }
-      
-      
-      //@extend %play-ytb;
-      
-        
-      font-size: 20px;
-    }
-  }
-
-
-  .derechos{
-    grid-area: derechos;
-    align-self: end;
-    margin: 0;
-    padding:20px 0;
-    width: 100%;
-    background-color: #0c0c0c;
-    .derechos__text{
-      font-size: 12px;
-      padding: 0 50px;
-      margin:0;
-      color: #888;
-      //font-family: 'Open Sans';
-      text-align: end;
-    }
-  }
+			&:hover {
+				color: $prim-clr;
+				text-decoration: underline;
+			}
+		}
+	}
 
 
 
-  @include responsive(tablet) {
-    grid-template-areas:
-      "logo-slogan    preguntas"
-      "logo-slogan    contacto"
-      "redes-sociales redes-sociales"
-      "derechos       derechos";
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    .contacto {
-      justify-self: start;
-    }
-    .preguntas {
-      justify-self: start;
-    }
-  }
-  @include responsive(mobile) {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "logo-slogan"
-      "contacto"
-      "preguntas"
-      "redes-sociales"
-      "derechos";
-    gap: 30px;
-    height: 100vh;
-    min-height: 680px;
-    .redes-sociales__list li{
-      margin: 0 5px;
-    }
-  }
+	.redes-sociales {
+		grid-area: redes-sociales;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.redes-sociales__list {
+			@include mandp(0, 0);
+			list-style: none;
+			display: flex;
+			@include flex(center, flex-end);
+
+			li{
+				@include sizes(50px, 50px);
+			}
+
+			.redes-sociales__text{
+				text-decoration: none;
+				font-size: 10px;
+				color: white;
+				opacity: 0.5;
+			}
+
+		}
+
+
+		.followus {
+			color: white;
+			text-align: center;
+			margin: 10px;
+		}
+
+
+		a {
+			color: white;
+			padding: 8px 10px;
+			text-decoration: none;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			@include flex(center, center);
+			border-radius: 5px;
+			font-size: 20px;
+
+			.fab{
+				padding: 5px 0;
+			}
+
+			.fa-youtube{
+				z-index: 1;
+			}
+
+			.play-ytb{
+				position: absolute;
+				@include sizes(8px, 6px);
+				top: 20px;
+				background-color: transparent;
+				z-index: 0;
+				transition: background .3s;
+			}
+
+			&:hover{
+				background-color: #313539;
+				
+				// Coloreo los iconos en el hover
+				@each $soc-net, $clr in $soc-network-color {
+
+					.fa-#{$soc-net} {
+						transition: color .3s;
+						color: $clr;
+					}
+
+					.play-ytb{
+						background-color: white;
+					}
+				}
+			}				
+		}
+	}
+
+
+	.derechos{
+		grid-area: derechos;
+		margin: 0;
+		padding:20px 0;
+		width: 100%;
+		background-color: #0c0c0c;
+
+		.derechos__text{
+			font-size: 12px;
+			padding: 0 50px;
+			margin:0;
+			color: #888;
+			font-family: "Open Sans", sans-serif;
+			text-align: end;
+		}
+	}
+
+
+
+	@include responsive(tablet) {
+		grid-template-areas:
+			"logo-slogan    preguntas"
+			"logo-slogan    contacto"
+			"redes-sociales redes-sociales"
+			"derechos       derechos";
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		.contacto {
+			justify-self: start;
+		}
+
+		.preguntas {
+			justify-self: start;
+		}
+	}
+
+	@include responsive(mobile) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"logo-slogan"
+			"contacto"
+			"preguntas"
+			"redes-sociales"
+			"derechos";
+		gap: 30px;
+		height: 100vh;
+		min-height: 680px;
+
+		.redes-sociales__list li{
+			margin: 0 5px;
+		}
+	}
 }

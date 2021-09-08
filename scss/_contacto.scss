@@ -1,10 +1,4 @@
-//.h1-contacto, .contacto-descr{
-    //width: 100%;
-    //max-width: 448px;
-    //padding: 20px;
-    //text-align: justify;
-    //margin: auto;
-//}
+@import 'tools';
 
 #body-contact{
     display: grid;
@@ -21,5 +15,44 @@
     }
     .footer-contact{
         grid-area: footer-contact;
+    }
+}
+
+.main-contact{
+
+    .article-contact{
+        max-width: 448px;
+        padding: 0;
+
+        .h1-contacto{
+            color:lighten($color-primary,20%);
+        }
+
+        .contacto-descr{
+            margin:  0;
+            max-width: 428px;
+        }
+    }
+    
+    .form-contact{
+        
+        .form-control, .btn{
+            
+            &:focus{
+                box-shadow: 0 0 8px .01rem lighten($color-primary,50%);
+                border-color: lighten($color-primary,50%);
+            }
+        }
+        
+        .btn{
+            border-color: lighten($color-primary,30%);
+            color: lighten($color-primary,30%);
+            background-color: #fff;
+            
+            &:hover{            
+                color: #fff;
+                background-color: lighten($color-primary,30%);
+            }
+        }
     }
 }

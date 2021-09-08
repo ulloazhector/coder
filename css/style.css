@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 * {
   margin: 0;
@@ -14,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .logo-image {
@@ -23,8 +24,10 @@ h6 {
 
 .header {
   position: fixed;
+  z-index: 100;
   width: 100%;
   height: 74px;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
 }
 .header .navbar {
   padding: 0;
@@ -32,6 +35,7 @@ h6 {
 }
 .header .navbar .container-fluid {
   background-color: #272747;
+  background: linear-gradient(0deg, #303057, #1e1e37);
   z-index: 10;
   padding: 0;
 }
@@ -46,6 +50,7 @@ h6 {
   position: relative;
   border-radius: 4px;
   padding: 8px 20px;
+  font-family: "Open Sans", sans-serif;
 }
 .header .navbar .container-fluid .navbar-nav .nav-item .nav-link::after {
   position: absolute;
@@ -211,7 +216,6 @@ h6 {
   }
   .header .navbar .container-fluid .navbar-nav {
     justify-content: center;
-    background: linear-gradient(210deg, #503c97 0%, #302e31 100%);
   }
   .header .navbar .container-fluid .navbar-nav .nav-item .nav-link {
     width: 100%;
@@ -429,13 +433,13 @@ h6 {
     transform: scale(1);
   }
   10% {
-    transform: scale(1.25);
+    transform: scale(1.3);
   }
   20% {
     transform: scale(1);
   }
   30% {
-    transform: scale(1.25);
+    transform: scale(1.3);
   }
   40% {
     transform: scale(1);
@@ -453,14 +457,17 @@ h6 {
   padding: 0;
   width: auto;
   list-style: none;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
 }
 .footer .contacto .contacto__list .contact__first-item {
+  font-size: 16px;
   line-height: 50px;
   color: tomato;
 }
 .footer .contacto .contacto__list i {
   width: 16px;
-  margin-right: 16px;
+  margin-right: 8px;
 }
 .footer .preguntas {
   grid-area: preguntas;
@@ -471,10 +478,14 @@ h6 {
   list-style: none;
 }
 .footer .preguntas .preguntas__list .preguntas__first-item {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
   line-height: 50px;
   color: tomato;
 }
 .footer .preguntas a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
   color: white;
   text-decoration: none;
   transition: all 0.15s;
@@ -574,7 +585,6 @@ h6 {
 }
 .footer .derechos {
   grid-area: derechos;
-  align-self: end;
   margin: 0;
   padding: 20px 0;
   width: 100%;
@@ -585,6 +595,7 @@ h6 {
   padding: 0 50px;
   margin: 0;
   color: #888;
+  font-family: "Open Sans", sans-serif;
   text-align: end;
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
@@ -1122,6 +1133,31 @@ h6 {
 }
 #body-contact .footer-contact {
   grid-area: footer-contact;
+}
+
+.main-contact .article-contact {
+  max-width: 448px;
+  padding: 0;
+}
+.main-contact .article-contact .h1-contacto {
+  color: #4b4b89;
+}
+.main-contact .article-contact .contacto-descr {
+  margin: 0;
+  max-width: 428px;
+}
+.main-contact .form-contact .form-control:focus, .main-contact .form-contact .btn:focus {
+  box-shadow: 0 0 8px 0.01rem #a1a1cc;
+  border-color: #a1a1cc;
+}
+.main-contact .form-contact .btn {
+  border-color: #6060a7;
+  color: #6060a7;
+  background-color: #fff;
+}
+.main-contact .form-contact .btn:hover {
+  color: #fff;
+  background-color: #6060a7;
 }
 
 .error-container {
