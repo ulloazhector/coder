@@ -221,7 +221,7 @@ h6 {
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     line-height: 32px;
   }
   .header .navbar .container-fluid .navbar-nav .nav-item .nav-link::after {
@@ -588,6 +588,7 @@ h6 {
 }
 .footer .derechos {
   grid-area: derechos;
+  align-self: end;
   margin: 0;
   padding: 20px 0;
   width: 100%;
