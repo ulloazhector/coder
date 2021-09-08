@@ -50,7 +50,6 @@ h6 {
   position: relative;
   border-radius: 4px;
   padding: 8px 20px;
-  font-family: "Open Sans", sans-serif;
 }
 .header .navbar .container-fluid .navbar-nav .nav-item .nav-link::after {
   position: absolute;
@@ -233,12 +232,15 @@ h6 {
     transform: none;
   }
   .header .navbar .container-fluid .navbar-nav .nav-item .nav-link:hover::after {
-    background-color: #ffffff50;
+    background-color: #ffffff60;
     transform: none;
   }
   .header .navbar .container-fluid .navbar-nav .nav-item .nav-link .far, .header .navbar .container-fluid .navbar-nav .nav-item .nav-link .fas {
     display: block;
     width: 100%;
+  }
+  .header .navbar .container-fluid .navbar-nav .nav-item .nav-link#navbarDropdownMenuLink .arrow {
+    height: 25px;
   }
   .header .navbar .container-fluid .navbar-nav .nav-item .dropdown-menu {
     margin: 0;
@@ -247,6 +249,7 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    transition: all 0.1s;
   }
   .header .navbar .container-fluid .navbar-nav .nav-item .dropdown-menu.show {
     height: 96px;

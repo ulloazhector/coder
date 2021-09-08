@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'tools';
 
+
 .header{
     position: fixed;
     z-index: 100;
@@ -33,7 +34,7 @@
                         position: relative;
                         border-radius: 4px;
                         padding: 8px 20px;
-                        font-family: "Open Sans", sans-serif;
+                        
                         
                         &::after{
                             position: absolute;
@@ -275,13 +276,20 @@
                             }
                             
                             &:hover::after{
-                                background-color: #ffffff50;
+                                background-color: #ffffff60;
                                 transform:none;
                             }
 
                             .far, .fas{
                                 display: block;
                                 width: 100%;
+                            }
+
+                            &#navbarDropdownMenuLink{
+
+                                .arrow{
+                                    height: 25px;
+                                }
                             }
                         }
 
@@ -292,6 +300,7 @@
                             display: flex;
                             justify-content: center;
                             align-items: stretch;
+                            transition:  all .1s;
 
                             &.show{
                                 height: 96px;
