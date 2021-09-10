@@ -3,7 +3,7 @@
 
 #body-index{
     display: grid;
-    grid-template-rows: 74px 60vh auto auto;
+    grid-template-rows: $h-menu 60vh auto auto;
     grid-template-columns: 1fr;
     grid-template-areas: "header-index"
                          "main-index"

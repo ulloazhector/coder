@@ -674,7 +674,7 @@ h6 {
     grid-template-columns: 1fr;
     grid-template-areas: "logo-slogan" "contacto" "preguntas" "redes-sociales" "derechos";
     gap: 30px;
-    height: 100vh;
+    height: calc(100vh - $h-menu);
     min-height: 680px;
   }
   .footer .redes-sociales__list li {
@@ -684,7 +684,7 @@ h6 {
 
 #body-beers {
   display: grid;
-  grid-template-rows: 80px 1fr auto;
+  grid-template-rows: 74px 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header-beers" "main-beers" "footer-beers";
 }
