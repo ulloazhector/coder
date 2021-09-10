@@ -14,7 +14,7 @@
         
         .container-fluid{
             background-color:#272747;
-            background: linear-gradient(0deg, lighten(#272747,15%), #272747);
+            background: linear-gradient(0deg, lighten(#272747,12%), #272747);
             z-index: 10;
             padding: 0;
 
@@ -258,11 +258,12 @@
                 #navbarNavDropdown{
                     transition: opacity 1.5s;
                     &.collapsing{
-                        transition: height .25s;
                         opacity: 0;
+                        transition: height .5s;
                     }
                     .navbar-nav{
                         height: calc(100vh - 74px);
+                        opacity: 1;
                         justify-content: center;
                         
                         .nav-item{

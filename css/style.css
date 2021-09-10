@@ -35,7 +35,7 @@ h6 {
 }
 .header .navbar .container-fluid {
   background-color: #272747;
-  background: linear-gradient(0deg, #424278, #272747);
+  background: linear-gradient(0deg, #3d3d6f, #272747);
   z-index: 10;
   padding: 0;
 }
@@ -216,11 +216,12 @@ h6 {
     transition: opacity 1.5s;
   }
   .header .navbar .container-fluid #navbarNavDropdown.collapsing {
-    transition: height 0.25s;
     opacity: 0;
+    transition: height 0.5s;
   }
   .header .navbar .container-fluid #navbarNavDropdown .navbar-nav {
     height: calc(100vh - 74px);
+    opacity: 1;
     justify-content: center;
   }
   .header .navbar .container-fluid #navbarNavDropdown .navbar-nav .nav-item.nav-item-5 .nav-link::after {
