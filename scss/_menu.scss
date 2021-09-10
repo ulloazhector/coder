@@ -156,6 +156,10 @@
                                 &:hover{
                                     padding-left: 24px;                                
                                 }
+                                
+                                &:active{
+                                    background: #f1884e;
+                                }
                             }
                         
                             .dropdown-item-ale::after{

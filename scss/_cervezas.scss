@@ -2,14 +2,15 @@
 @import "tools";
 
 #body-beers{
+  background-color: darken(white, 5%);
   display: grid;
   grid-template-rows: $h-menu 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header-beers"
-                       "main-beers"
-                       "footer-beers";
+  "main-beers"
+  "footer-beers";
   .header-beers{
-      grid-area: header-beers;   
+    grid-area: header-beers;   
   }
   .main-beers{
       grid-area: main-beers;
@@ -23,30 +24,34 @@
 
 .encabezado-cervezas {
   margin: auto;
-  font-size: 50px;
-  padding: 10px;
-  max-width: 1220px;
+  padding: 20px;
+  max-width: 900px;
+  color:lighten($color-primary,20%)
 }
 .beer-list {
   list-style: none;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, minmax(350px, 600px));
-  grid-template-rows: repeat(2, minmax(250px, auto));
   gap: 20px;
   padding: 0;
+  margin: 20px;
+
   .beer-list-item {
     display: grid;
+    max-width: 900px;
     position: relative;
     grid-template-rows: auto auto 60px;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: minmax(200px,35%) 1fr;
     grid-template-areas:
       "image-beer name"
       "image-beer descr"
       "image-beer buy-btn";
-    //border-radius: 5px;
+    border-radius: 6px;
+    overflow: hidden;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
       rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    background-color: white;
     .beer-info {
       width: 0;
       position: absolute;
@@ -56,73 +61,64 @@
         list-style: none;
         display: none;
         transition: all 0.8s;
-        width: 100%;
+        width: 0;
         height: 100%;
         font-size: 16px;
-        // text-transform: uppercase;
+        text-transform: uppercase;
+        font-family: 'Open Sans';
         line-height: 24px;
-        font-weight: bold;
+        letter-spacing: 2px;
         padding-right: 10px;
         white-space: nowrap;
       }
     }
     &:hover {
       .beer-info {
-        background-color: #C93636;
-        width: 42.85%;
+        background-color: lighten($color-primary,35%);
+        width: 35%;
+        min-width: 200px;
         ul {
+			width: 100%;
           flex-direction: column;
           @include flex(space-evenly, flex-end);
-          padding-right: 20%;
+          padding: 0 26px;
           color: white;
         }
       }
     }
     .image-beer {
-      width: 90%;
+      width: 200px;
       grid-area: image-beer;
       justify-self: center;
       align-self: center;
     }
     .descr {
       grid-area: descr;
-      margin-left: 10px;
       padding: 16px;
     }
     .name {
-      margin-left: 10px;
       padding: 16px;
       grid-area: name;
     }
     .buy-btn {
       grid-area: buy-btn;
-      justify-self: end;
+      justify-self: start;
       align-content: center;
       border-radius: 20px;
       background-color: white;
-      margin-bottom: 20px;
-      border: 2px solid $alt-clr;
-      color: $alt-clr;
-      margin-right: 10px;
+      border: 2px solid lighten($color-primary,35%);
+      color: lighten($color-primary,35%);
+      margin-left: 26px;
       @include sizes(120px, 40px);
       transition: all 0.2s;
       &:hover {
         color: white;
-        background-color: $alt-clr;
+        background-color: lighten($color-primary,35%);
       }
     }
   }
 
-  @include responsive(tablet) {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    .beer-list-item:hover{
-        ul{
-            padding-right: 40%;
-        }
-    }
-  }
-  @include responsive(mobile){
+  @include responsive(678px){
   grid-template-columns: 1fr;
   gap: 40px;
   .beer-list-item{
@@ -132,41 +128,74 @@
                           "beer-info"
                           "descr"
                           "buy-btn";
-    grid-template-rows: auto auto 32px auto auto;
-    &:hover{
-      .beer-info {
-        width: 100%;
-        position: static;
-        background-color: transparent;
-        grid-area: beer-info;
+    grid-template-rows: 250px auto auto auto 64px;
+	&:hover{
 
-        ul {
-          flex-direction: row;
-          padding: 0;
+		.beer-info{
+			width: 100%;
+			background-color: transparent;
+			ul{
+				width:100%;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: flex-start;
+
+		padding: 0 26px;
+        li{
+			font-size: 12px;
+          color: darken(tomato,22%);
         }
-      }
-    }
+
+			}
+		}
+	}
     .beer-info{
       grid-area: beer-info;
       position:static;
       width:100%;
-      height: 32px;
+	  
       ul{
-        @include flex(space-evenly, flex-end);
-        padding: 0;
-        height: 32px;
+		  width:100%;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: flex-start;
+
+		padding: 0 26px;
         li{
-          color: $prim-clr;
+			font-size: 12px;
+          color: darken(tomato,22%);
         }
         
         }
+		
       }
 
       .buy-btn{
         justify-self: center;
-        margin-right: 0;
+		align-self: start;
+        margin: 0;
       }
     }
+		#beer-ipa{
+			h2{
+				box-shadow: 0 50px 100px -110px rgb(255, 160, 2) inset;
+			}
+		}
+		#beer-cream-stout{
+			h2{
+				box-shadow: 0 50px 100px -110px rgb(0, 0, 0) inset;
+			}
+		}
+		#beer-scotch{
+			h2{
+				box-shadow: 0 50px 100px -110px rgb(201, 54, 54) inset;
+			}
+		}
+		#beer-golden{
+			h2{
+				box-shadow: 0 50px 100px -110px rgb(255, 196, 0) inset;
+			}
+		}
   }
 }
   

@@ -144,6 +144,9 @@ h6 {
 .header .navbar .container-fluid #navbarNavDropdown .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
   padding-left: 24px;
 }
+.header .navbar .container-fluid #navbarNavDropdown .navbar-nav .nav-item .dropdown-menu .dropdown-item:active {
+  background: #f1884e;
+}
 .header .navbar .container-fluid #navbarNavDropdown .navbar-nav .nav-item .dropdown-menu .dropdown-item-ale::after {
   background-color: gold;
 }
@@ -673,8 +676,9 @@ h6 {
   .footer {
     grid-template-columns: 1fr;
     grid-template-areas: "logo-slogan" "contacto" "preguntas" "redes-sociales" "derechos";
-    gap: 30px;
-    height: calc(100vh - $h-menu);
+    gap: 20px;
+    padding: 0;
+    height: calc(100vh - 74px);
     min-height: 680px;
   }
   .footer .redes-sociales__list li {
@@ -683,6 +687,7 @@ h6 {
 }
 
 #body-beers {
+  background-color: #f2f2f2;
   display: grid;
   grid-template-rows: 74px 1fr auto;
   grid-template-columns: 1fr;
@@ -700,27 +705,30 @@ h6 {
 
 .encabezado-cervezas {
   margin: auto;
-  font-size: 50px;
-  padding: 10px;
-  max-width: 1220px;
+  padding: 20px;
+  max-width: 900px;
+  color: #4b4b89;
 }
 
 .beer-list {
   list-style: none;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, minmax(350px, 600px));
-  grid-template-rows: repeat(2, minmax(250px, auto));
   gap: 20px;
   padding: 0;
+  margin: 20px;
 }
 .beer-list .beer-list-item {
   display: grid;
+  max-width: 900px;
   position: relative;
   grid-template-rows: auto auto 60px;
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: minmax(200px, 35%) 1fr;
   grid-template-areas: "image-beer name" "image-beer descr" "image-beer buy-btn";
+  border-radius: 6px;
+  overflow: hidden;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: white;
 }
 .beer-list .beer-list-item .beer-info {
   width: 0;
@@ -732,70 +740,62 @@ h6 {
   list-style: none;
   display: none;
   transition: all 0.8s;
-  width: 100%;
+  width: 0;
   height: 100%;
   font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Open Sans";
   line-height: 24px;
-  font-weight: bold;
+  letter-spacing: 2px;
   padding-right: 10px;
   white-space: nowrap;
 }
 .beer-list .beer-list-item:hover .beer-info {
-  background-color: #C93636;
-  width: 42.85%;
+  background-color: #7070b0;
+  width: 35%;
+  min-width: 200px;
 }
 .beer-list .beer-list-item:hover .beer-info ul {
+  width: 100%;
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  padding-right: 20%;
+  padding: 0 26px;
   color: white;
 }
 .beer-list .beer-list-item .image-beer {
-  width: 90%;
+  width: 200px;
   grid-area: image-beer;
   justify-self: center;
   align-self: center;
 }
 .beer-list .beer-list-item .descr {
   grid-area: descr;
-  margin-left: 10px;
   padding: 16px;
 }
 .beer-list .beer-list-item .name {
-  margin-left: 10px;
   padding: 16px;
   grid-area: name;
 }
 .beer-list .beer-list-item .buy-btn {
   grid-area: buy-btn;
-  justify-self: end;
+  justify-self: start;
   align-content: center;
   border-radius: 20px;
   background-color: white;
-  margin-bottom: 20px;
-  border: 2px solid #C93636;
-  color: #C93636;
-  margin-right: 10px;
+  border: 2px solid #7070b0;
+  color: #7070b0;
+  margin-left: 26px;
   width: 120px;
   height: 40px;
   transition: all 0.2s;
 }
 .beer-list .beer-list-item .buy-btn:hover {
   color: white;
-  background-color: #C93636;
+  background-color: #7070b0;
 }
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  .beer-list {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .beer-list .beer-list-item:hover ul {
-    padding-right: 40%;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 425px) {
+@media only screen and (max-width: 678px) {
   .beer-list {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -803,37 +803,55 @@ h6 {
   .beer-list .beer-list-item {
     grid-template-columns: 1fr;
     grid-template-areas: "image-beer" "name" "beer-info" "descr" "buy-btn";
-    grid-template-rows: auto auto 32px auto auto;
+    grid-template-rows: 250px auto auto auto 64px;
   }
   .beer-list .beer-list-item:hover .beer-info {
     width: 100%;
-    position: static;
     background-color: transparent;
-    grid-area: beer-info;
   }
   .beer-list .beer-list-item:hover .beer-info ul {
-    flex-direction: row;
-    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 26px;
+  }
+  .beer-list .beer-list-item:hover .beer-info ul li {
+    font-size: 12px;
+    color: #d62100;
   }
   .beer-list .beer-list-item .beer-info {
     grid-area: beer-info;
     position: static;
     width: 100%;
-    height: 32px;
   }
   .beer-list .beer-list-item .beer-info ul {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    padding: 0;
-    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 26px;
   }
   .beer-list .beer-list-item .beer-info ul li {
-    color: tomato;
+    font-size: 12px;
+    color: #d62100;
   }
   .beer-list .beer-list-item .buy-btn {
     justify-self: center;
-    margin-right: 0;
+    align-self: start;
+    margin: 0;
+  }
+  .beer-list #beer-ipa h2 {
+    box-shadow: 0 50px 100px -110px #ffa002 inset;
+  }
+  .beer-list #beer-cream-stout h2 {
+    box-shadow: 0 50px 100px -110px black inset;
+  }
+  .beer-list #beer-scotch h2 {
+    box-shadow: 0 50px 100px -110px #c93636 inset;
+  }
+  .beer-list #beer-golden h2 {
+    box-shadow: 0 50px 100px -110px #ffc400 inset;
   }
 }
 
@@ -1020,8 +1038,9 @@ h6 {
 }
 
 .banner {
-  height: 50vh;
+  height: calc(50vh - $h-menu);
   position: relative;
+  overflow: hidden;
 }
 .banner img {
   width: 100%;
@@ -1029,7 +1048,7 @@ h6 {
   object-fit: cover;
 }
 .banner .h1-container {
-  top: 34%;
+  top: calc(50% - 75px);
   width: 100%;
   height: 150px;
   position: absolute;
@@ -1046,6 +1065,16 @@ h6 {
   font-family: "Oswald", "sans-serif";
   line-height: 100px;
   padding: 25px;
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .banner .h1-container .encabezado-nosotros {
+    font-size: 48px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 425px) {
+  .banner .h1-container .encabezado-nosotros {
+    font-size: 44px;
+  }
 }
 
 .main-us {
@@ -1066,6 +1095,12 @@ h6 {
 .main-us img {
   height: 100%;
 }
+.main-us .h2-sobre-nosotros {
+  width: 60%;
+  margin: 20px 0;
+  min-width: 576px;
+  max-width: 900px;
+}
 .main-us .h2-nosotros-proposito {
   width: 60%;
   margin: 20px 0;
@@ -1073,13 +1108,13 @@ h6 {
   max-width: 900px;
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
-  .main-us .encabezado-nosotros, .main-us p, .main-us img, .main-us .h2-nosotros-proposito {
+  .main-us .encabezado-nosotros, .main-us p, .main-us img, .main-us .h2-nosotros-proposito, .main-us .h2-sobre-nosotros {
     width: 80%;
     min-width: 0;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 425px) {
-  .main-us .encabezado-nosotros, .main-us p, .main-us img, .main-us .h2-nosotros-proposito {
+  .main-us .encabezado-nosotros, .main-us p, .main-us img, .main-us .h2-nosotros-proposito, .main-us .h2-sobre-nosotros {
     width: 86%;
     min-width: 0;
   }

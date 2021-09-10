@@ -231,8 +231,9 @@
 			"preguntas"
 			"redes-sociales"
 			"derechos";
-		gap: 30px;
-		height: calc(100vh - $h-menu);
+		gap: 20px;
+		padding: 0;
+		height: calc(100vh - 74px);
 		min-height: 680px;
 
 		.redes-sociales__list li{
