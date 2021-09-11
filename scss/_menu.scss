@@ -263,7 +263,7 @@
                     transition: opacity 1.5s;
                     &.collapsing{
                         opacity: 0;
-                        transition: height .5s;
+                        transition: height .45s;
                     }
                     .navbar-nav{
                         height: calc(100vh - 74px);

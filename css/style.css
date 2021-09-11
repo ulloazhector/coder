@@ -220,7 +220,7 @@ h6 {
   }
   .header .navbar .container-fluid #navbarNavDropdown.collapsing {
     opacity: 0;
-    transition: height 0.5s;
+    transition: height 0.45s;
   }
   .header .navbar .container-fluid #navbarNavDropdown .navbar-nav {
     height: calc(100vh - 74px);
@@ -383,7 +383,7 @@ h6 {
 }
 
 .patagonia {
-  background-image: linear-gradient(200deg, #ff0000 0%, #fffF00 100%);
+  background-image: linear-gradient(200deg, #ff008f 0%, #fffF00 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
