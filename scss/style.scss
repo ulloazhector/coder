@@ -31,3 +31,7 @@ h6 {
 @import "contacto";
 @import "error";
 @import "tools";
+
+a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]{
+  display: none;
+}
