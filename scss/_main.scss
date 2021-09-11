@@ -112,7 +112,7 @@
     grid-template-areas: "articulo aside"
                          "productos aside";
     gap: 20px;
-    margin: 20px max(calc(50% - 450px),20px);
+    margin: 20px max(calc(50% - 450px),12px);
     max-width: 900px;
     .articulo{
         grid-area: articulo;

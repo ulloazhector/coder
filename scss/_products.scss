@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     
     .product {
-        @include sizes(340px, 450px);
+        @include sizes(300px, 450px);
         @include flex (space-between, center);
         
         background-color: #fff;
