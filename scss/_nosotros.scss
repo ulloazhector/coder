@@ -56,19 +56,19 @@
             position: absolute;
             text-transform: uppercase;
             color: white;
-            font-size: 60px;
+            font-size: 3.75rem;
 
             @include responsive(tablet){
-                font-size: 48px;
+                font-size: 3rem;
             }
             
             @include responsive(mobile){
-                font-size: 44px;
+                font-size: 2.75rem;
             }
 
             font-family: 'Oswald', 'sans-serif';
             line-height: 100px;
-            padding: 25px;
+            padding: 1.56rem;
             
         }
     }
@@ -83,7 +83,6 @@
     
     p, img{
         text-align: justify;
-        // margin: 20px;
         width: 60%;
         min-width: 576px;
         max-width: 900px;
@@ -182,17 +181,17 @@
 
             .tag {
                 position: absolute;
-                /* left: 10px; */
                 left: -20px;
                 top: 16px;
                 
                 .num-list {
                     background-color: $ns-light;
+                    background-color: lighten($color-primary, 35%);
                     color: white;
-                    font-size: 18px;
+                    font-size: 1.125rem;
                     font-family: 'Oswald';
                     border-radius: 2px;
-                    padding: 0 18px;
+                    padding: 0 1.125rem;
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 12px -2px, rgba(0, 0, 0, 0.7) 0px 3px 7px -3px;
                     display: inline-block;
                 }

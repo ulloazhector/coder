@@ -6,17 +6,17 @@
     grid-template-rows: $h-menu 60vh auto auto;
     grid-template-columns: 1fr;
     grid-template-areas: "header-index"
-                         "main-index"
-                         "products-section-index"
+                         "slide-index"
+                         "content"
                          "footer-index";
     .header-index{
         grid-area: header-index;   
     }
-    .main-index{
-        grid-area: main-index;
+    .slide-index{
+        grid-area: slide-index;
     }
-    .products-section-index{
-        grid-area: products-section-index;
+    .content{
+        grid-area: content;
     }
     .footer-index{
         grid-area: footer-index;
@@ -27,41 +27,44 @@
 .main-section{
     position: relative;
 }
+
 .encabezado-main {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 10%;
     font-style: normal;
     font-family: 'Oswald', sans-serif;
-    font-size: 64px;
+    font-size: 4rem;
     text-transform: uppercase;
     color:#ffffff;
-    letter-spacing: 10px;
-    width: 50%;
+    text-shadow: 8px 8px 18px rgb(0 0 0);
+    letter-spacing: 0.625rem;
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
     z-index: 1;
     @include responsive(tablet){
-        font-size: 48px;
-        .patagonia{
-            font-size: 48px;
-        }
+        max-width: 400px;
+        height: auto;
+        font-size: 3.25rem;
     }
     @include responsive(mobile){
-        font-size: 32px;
-        line-height: 48px;
-        .patagonia{
-            font-size: 36px;
-        }
+        width: 300px;
+        height: auto;
+        font-size: 2.75rem;
+        line-height: 3rem;
     }
 }
 
 .patagonia {
-    background-image: linear-gradient(45deg, rgba(255,100,34,1) 0%, rgba(255,0,121,1) 100%);
+    background-image: linear-gradient(200deg, #ff0000 0%, #fffF00 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-weight: bold;
+    text-shadow: none;
 }
 
 .carousel{
@@ -87,4 +90,121 @@
 
 }
 
+@include responsive(mob_and_tab){
+    .carousel{
+
+        .carousel-control-next, .carousel-control-prev{
+            display: none;
+        }
+    }
+}
+
+
 /* Fin Sección principal */
+
+
+
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "articulo aside"
+                         "productos aside";
+    gap: 20px;
+    margin: 20px max(calc(50% - 450px),20px);
+    max-width: 900px;
+    .articulo{
+        grid-area: articulo;
+    }
+    
+    .aside{
+        grid-area: aside;
+        position: sticky;
+        top:20px + $h-menu;
+        
+        background: linear-gradient(334deg, #012403 0%, #318637 30%, white 100%);
+        border-radius: 6px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        
+        overflow: hidden;
+
+        &:hover{
+            
+            .img-lupulo{
+                transform: scale(1.1);
+            }
+        }
+        
+        .img-container{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .img-lupulo{
+                @include img-cover;
+                transition: transform .25s;
+                
+            }
+        }
+        .parraf{
+            z-index: 1;
+            font-family: "Open Sans", sans-serif;
+            color: white;
+            padding: 24px 14px;
+            background-color: #133d0261;
+            margin: 0;
+            backdrop-filter: blur(3px);
+            .lupulo-info-link{
+                color:#f1884e;
+            }
+        }
+    }
+        
+    .productos{
+
+        .product{
+            
+            grid-area: productos;
+            border-radius: 6px;
+            background-color: white;
+
+            .product__button {
+                border-radius: 20px;
+                font-size: 0.875rem;
+                background-color: white;
+                border: 2px solid lighten($color-primary,35%);
+                color: lighten($color-primary,35%);
+                margin-bottom: 20px;
+                @include sizes(120px, 40px);
+                transition: all 0.2s;
+                &:hover {
+                    color: white;
+                    background-color: lighten($color-primary,35%);
+                }
+            }
+        }
+    }
+
+    @include responsive(mob_and_tab){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: "articulo"
+                             "aside"
+                             "productos";
+        
+        .aside{
+            height: 300px;
+            position: relative;
+            top: 0;
+            .parraf{
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+}

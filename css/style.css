@@ -43,8 +43,8 @@ h6 {
   margin: 0;
 }
 .header .navbar .container-fluid .navbar-brand .logo-image {
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
 }
 .header .navbar .container-fluid #navbarNavDropdown .navbar-nav .nav-item .nav-link {
   position: relative;
@@ -234,7 +234,7 @@ h6 {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.875rem;
     letter-spacing: 4px;
     line-height: 32px;
     padding: 8px 10px;
@@ -331,16 +331,16 @@ h6 {
   display: grid;
   grid-template-rows: 74px 60vh auto auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "header-index" "main-index" "products-section-index" "footer-index";
+  grid-template-areas: "header-index" "slide-index" "content" "footer-index";
 }
 #body-index .header-index {
   grid-area: header-index;
 }
-#body-index .main-index {
-  grid-area: main-index;
+#body-index .slide-index {
+  grid-area: slide-index;
 }
-#body-index .products-section-index {
-  grid-area: products-section-index;
+#body-index .content {
+  grid-area: content;
 }
 #body-index .footer-index {
   grid-area: footer-index;
@@ -352,43 +352,45 @@ h6 {
 
 .encabezado-main {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 10%;
   font-style: normal;
   font-family: "Oswald", sans-serif;
-  font-size: 64px;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: 10px;
-  width: 50%;
+  text-shadow: 8px 8px 18px black;
+  letter-spacing: 0.625rem;
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
   z-index: 1;
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .encabezado-main {
-    font-size: 48px;
-  }
-  .encabezado-main .patagonia {
-    font-size: 48px;
+    max-width: 400px;
+    height: auto;
+    font-size: 3.25rem;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 425px) {
   .encabezado-main {
-    font-size: 32px;
-    line-height: 48px;
-  }
-  .encabezado-main .patagonia {
-    font-size: 36px;
+    width: 300px;
+    height: auto;
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
 .patagonia {
-  background-image: linear-gradient(45deg, #ff6422 0%, #ff0079 100%);
+  background-image: linear-gradient(200deg, #ff0000 0%, #fffF00 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   font-weight: bold;
+  text-shadow: none;
 }
 
 .carousel .carousel-item {
@@ -411,7 +413,101 @@ h6 {
   box-shadow: -120px 0px 40px -90px rgba(255, 255, 255, 0.5) inset;
 }
 
+@media only screen and (max-width: 991px) {
+  .carousel .carousel-control-next, .carousel .carousel-control-prev {
+    display: none;
+  }
+}
 /* Fin Sección principal */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: auto auto;
+  grid-template-areas: "articulo aside" "productos aside";
+  gap: 20px;
+  margin: 20px max(calc(50% - 450px), 20px);
+  max-width: 900px;
+}
+.content .articulo {
+  grid-area: articulo;
+}
+.content .aside {
+  grid-area: aside;
+  position: sticky;
+  top: 94px;
+  background: linear-gradient(334deg, #012403 0%, #318637 30%, white 100%);
+  border-radius: 6px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+.content .aside:hover .img-lupulo {
+  transform: scale(1.1);
+}
+.content .aside .img-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content .aside .img-container .img-lupulo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s;
+}
+.content .aside .parraf {
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  padding: 24px 14px;
+  background-color: #133d0261;
+  margin: 0;
+  backdrop-filter: blur(3px);
+}
+.content .aside .parraf .lupulo-info-link {
+  color: #f1884e;
+}
+.content .productos .product {
+  grid-area: productos;
+  border-radius: 6px;
+  background-color: white;
+}
+.content .productos .product .product__button {
+  border-radius: 20px;
+  font-size: 0.875rem;
+  background-color: white;
+  border: 2px solid #7070b0;
+  color: #7070b0;
+  margin-bottom: 20px;
+  width: 120px;
+  height: 40px;
+  transition: all 0.2s;
+}
+.content .productos .product .product__button:hover {
+  color: white;
+  background-color: #7070b0;
+}
+@media only screen and (max-width: 991px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "articulo" "aside" "productos";
+  }
+  .content .aside {
+    height: 300px;
+    position: relative;
+    top: 0;
+  }
+  .content .aside .parraf {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 .products-section {
   display: flex;
   justify-content: center;
@@ -419,13 +515,13 @@ h6 {
   flex-wrap: wrap;
 }
 .products-section .product {
-  width: 300px;
-  height: 500px;
+  width: 340px;
+  height: 450px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  margin: 20px;
+  margin: 0.75rem;
   flex-direction: column;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   transition: all 0.3s;
@@ -434,27 +530,15 @@ h6 {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   transform: scale(101%);
 }
-.products-section .product .product__button {
-  font-size: 14px;
-  padding: 10px 20px;
-  border: 2px solid #C93636;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #C93636;
-  transition: all 0.2s;
-}
-.products-section .product .product__button:hover {
-  cursor: pointer;
-  background-color: #C93636;
-  color: #fff;
-}
 .products-section .product p {
-  width: 250px;
+  width: 100%;
+  padding: 1rem;
   text-align: justify;
 }
 .products-section .product .product__image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
 }
 
 /* Footer */
@@ -517,16 +601,16 @@ h6 {
   padding: 0;
   width: auto;
   list-style: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Open Sans", sans-serif;
 }
 .footer .contacto .contacto__list .contact__first-item {
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 1rem;
+  line-height: 3.125rem;
   color: tomato;
 }
 .footer .contacto .contacto__list i {
-  width: 16px;
+  width: 1rem;
   margin-right: 8px;
 }
 .footer .preguntas {
@@ -539,13 +623,13 @@ h6 {
 }
 .footer .preguntas .preguntas__list .preguntas__first-item {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 1rem;
+  line-height: 3.125rem;
   color: tomato;
 }
 .footer .preguntas a {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: white;
   text-decoration: none;
   transition: all 0.15s;
@@ -595,7 +679,7 @@ h6 {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .footer .redes-sociales a .fab {
   padding: 5px 0;
@@ -652,7 +736,7 @@ h6 {
   background-color: #0c0c0c;
 }
 .footer .derechos .derechos__text {
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 0 50px;
   margin: 0;
   color: #888;
@@ -704,7 +788,7 @@ h6 {
 }
 
 .encabezado-cervezas {
-  margin: auto;
+  margin: 16px auto;
   padding: 20px;
   max-width: 900px;
   color: #4b4b89;
@@ -742,7 +826,7 @@ h6 {
   transition: all 0.8s;
   width: 0;
   height: 100%;
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
   font-family: "Open Sans";
   line-height: 24px;
@@ -761,7 +845,7 @@ h6 {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  padding: 0 26px;
+  padding: 0 1rem;
   color: white;
 }
 .beer-list .beer-list-item .image-beer {
@@ -772,10 +856,10 @@ h6 {
 }
 .beer-list .beer-list-item .descr {
   grid-area: descr;
-  padding: 16px;
+  padding: 1rem;
 }
 .beer-list .beer-list-item .name {
-  padding: 16px;
+  padding: 1rem;
   grid-area: name;
 }
 .beer-list .beer-list-item .buy-btn {
@@ -814,7 +898,7 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 26px;
+    padding: 0 1rem;
   }
   .beer-list .beer-list-item:hover .beer-info ul li {
     font-size: 12px;
@@ -830,10 +914,10 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 26px;
+    padding: 0 1rem;
   }
   .beer-list .beer-list-item .beer-info ul li {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #d62100;
   }
   .beer-list .beer-list-item .buy-btn {
@@ -872,10 +956,10 @@ h6 {
 }
 
 .encabezado-locales {
-  margin: auto;
-  font-size: 40px;
+  margin: 1rem auto;
   max-width: 900px;
   padding: 10px;
+  color: #4b4b89;
 }
 
 .ubications .ubications-list {
@@ -912,8 +996,8 @@ h6 {
   text-decoration: none;
   border: 0;
   color: white;
-  line-height: 16px;
-  font-size: 16px;
+  line-height: 1rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: absolute;
@@ -1061,19 +1145,19 @@ h6 {
   position: absolute;
   text-transform: uppercase;
   color: white;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-family: "Oswald", "sans-serif";
   line-height: 100px;
-  padding: 25px;
+  padding: 1.56rem;
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .banner .h1-container .encabezado-nosotros {
-    font-size: 48px;
+    font-size: 3rem;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 425px) {
   .banner .h1-container .encabezado-nosotros {
-    font-size: 44px;
+    font-size: 2.75rem;
   }
 }
 
@@ -1184,17 +1268,17 @@ h6 {
 }
 .section-process-us .list-process .list-process-item .tag {
   position: absolute;
-  /* left: 10px; */
   left: -20px;
   top: 16px;
 }
 .section-process-us .list-process .list-process-item .tag .num-list {
   background-color: #bba451;
+  background-color: #7070b0;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Oswald";
   border-radius: 2px;
-  padding: 0 18px;
+  padding: 0 1.125rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 12px -2px, rgba(0, 0, 0, 0.7) 0px 3px 7px -3px;
   display: inline-block;
 }
@@ -1262,7 +1346,7 @@ h6 {
   height: 100vh;
 }
 .error-container .encabezado-error {
-  font-size: 60px;
+  font-size: 3.75rem;
   text-transform: uppercase;
 }
 
